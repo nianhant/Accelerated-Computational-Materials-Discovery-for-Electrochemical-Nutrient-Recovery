@@ -15,8 +15,10 @@
 \usepackage[version=4]{mhchem}
 \usepackage{graphicx}
 \usepackage{subcaption}
-\captionsetup[subfigure]{labelfont=rm}
-% \usepackage{subfigure}
+
+\captionsetup[subfigure]{skip=1pt,singlelinecheck=false}
+% \captionsetup[subfigure]{font={bf,small}, skip=1pt, margin=-0.7cm, singlelinecheck=false}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
 %% un-comment the next line.  This provides information on the
@@ -173,90 +175,80 @@ The interdependence of pH and ligand concentration (e.g., due to \ce{NH3} equili
 
 
 \section{Results and discussion}
-The constructed Pourbaix diagrams are shown in Figure 
+Add metal-H2O to visualize how N-ligands affect corrosion.
 
-A pourbaix diagram of the xxx system with tot concentration of xxxx M is shown inxxx. Ammine complaxed with ions with xx number of coordinated ammonia is known to form xxx. 
+% CN = 0
+The constructed Pourbaix diagrams are shown in Figure \ref{fig:Pourbaix_NH3_Gly}. The ion activity is set to $10^{-4}$ mol/L. The initial (total?) \ce{NH3} concentration is set at 0.02 mol/L, and glycine at 0.005 mol/L. The targeted range for applied potential and solution pH is indicated by the green box in each diagram. Therefore we are interested in the stability of species in the region bounded by this range of potential and pH values. The presence of any aqueous ion or metal-ligand complex stability domain in this interested region indicates its thermodynamic favorable corrosion under the targeted condition. 
 
 
-The Pourbaix diagram of Ni-\ce{NH3}-Gly-\ce{H2O} and Ni-\ce{H2O} is shown in Fig. \ref{Ni Pourbaix diagram}. From the comparison, we can see that the addition of N-ligands significantly affects the stability of Ni bulk species and aqueous species. N-ligands can form Ni-ligand complexes that have more stable thermodynamic free energies than some bulk species, therefore changing the stability domains of solid Ni oxides. The intended experimental conditions for the current experiments is bounded by the green box in Fig.\ref{Ni Pourbaix diagram}. We can see that the bulk Ni electrode is likely to be complexed by Gly ligand under the experimental condition, since the metal-ligand complex is more thermodynamically stability than other species and can form over the intended experimental conditions. The stable regions of Ni's metal-ligands complexes over the range of applied potential and pH partially explain Ni's dissolvation under oxidizing potential and high ammonia concentration observed in experiments from a thermodynamics perspective, although a more thorough kinetics study should be performed to determine if the thermodynamics free energy is the main driving force of dissolution. 
+% divide discussion into immunity, passivation and corrosion. 
+% immunity domain -> pure metal; passivation -> metal oxides; corrosion -> aqeuous ions. 
+Discussion on Ni. In the targeted experimental condition, Ni displays a passivation region in a slightly alkaline condition. However, if the solution becomes more acidic, Ni enters the corrosion domain, where it forms more stable Ni-glycine complexes. Therefore the pH of the solution must in controlled carefully to prevent the formation of stable Ni-glycine complexes. 
+
+Discussion on Ti. 
+
+
+Discussion on Ti. 
+
+
+Discussion on Ti. 
+
+
+Discussion on Ti. 
+
+
+Ammine complexed with ions with xx number of coordinated ammonia is known to form xxx. 
+
+From the comparison, we can see that the addition of N-ligands significantly affects the stability of Ni bulk species and aqueous species. N-ligands can form Ni-ligand complexes that have more stable thermodynamic free energies than some bulk species, therefore changing the stability domains of solid Ni oxides. The intended experimental conditions for the current experiments is bounded by the green box in Fig.\ref{Ni Pourbaix diagram}. We can see that the bulk Ni electrode is likely to be complexed by Gly ligand under the experimental condition, since the metal-ligand complex is more thermodynamically stability than other species and can form over the intended experimental conditions. The stable regions of Ni's metal-ligands complexes over the range of applied potential and pH partially explain Ni's dissolvation under oxidizing potential and high ammonia concentration observed in experiments from a thermodynamics perspective, although a more thorough kinetics study should be performed to determine if the thermodynamics free energy is the main driving force of dissolution. 
 
 The Pourbaix diagram of other common metals that can be used as electrode in electrochemistry experiments are shown in Figs. x to x. From a thermodynamics perspective, these metal can all complex with N-ligands under intended experimental conditions, besides Ti. 
+
+% CN != 0
+
 \begin{figure}[htbp]
     \centering
     % Subfigure (a)
     \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Ni_Pourbaix}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \caption{}\label{fig:Ni_Pourbaix}
+        
         \par\medskip
     \end{subfigure}
     % Subfigure (b)
     \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Au_Pourbaix}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \caption{}\label{fig:Au_Pourbaix}
+        
         \par\medskip
     \end{subfigure}
     % Subfigure (c)
     \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Cu_Pourbaix}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \caption{}\label{fig:Cu_Pourbaix}
+        
         \par\medskip
         
     \end{subfigure}
     % Subfigure (d)
     \begin{subfigure}[b]{0.3\textwidth}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \caption{}\label{fig:Ti_Pourbaix}
+        \subcaption{}\label{fig:Ti_Pourbaix}
     \end{subfigure}
     % Subfigure (e)
     \begin{subfigure}[b]{0.3\textwidth}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \caption{}\label{fig:Pd_Pourbaix}
+        \subcaption{}\label{fig:Pd_Pourbaix}
     \end{subfigure}
     % Subfigure (f)
     \begin{subfigure}[b]{0.3\textwidth}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \caption{}\label{fig:Pt_Pourbaix}
+        \subcaption{}\label{fig:Pt_Pourbaix}
     \end{subfigure}
 
     \caption{Pourbaix diagrams for different metals at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
-    \label{fig:Pourbaix_all}
+    \label{fig:Pourbaix_NH3_Gly}
 \end{figure}
 
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-%   \label{Ni Pourbaix diagram}
-% \end{figure}
-
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-%   \label{Au Pourbaix diagram}
-% \end{figure}
-
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-%   \label{Cu Pourbaix diagram}
-% \end{figure}
-
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-%   \label{Ti Pourbaix diagram}
-% \end{figure}
-
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-%   \label{Pd Pourbaix diagram}
-% \end{figure}
-
-% \begin{figure}
-% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-%   \label{Pt Pourbaix diagram}
-% \end{figure}
 
 
 
