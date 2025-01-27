@@ -13,7 +13,10 @@
 %% servers.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[version=4]{mhchem}
-
+\usepackage{graphicx}
+\usepackage{subcaption}
+\captionsetup[subfigure]{labelfont=rm}
+% \usepackage{subfigure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% If issues arise when submitting your manuscript, you may want to
 %% un-comment the next line.  This provides information on the
@@ -124,7 +127,7 @@ Through this work, we present a material screening strategy that integrates stab
 
 \section{Methods}
 \subsection{Pourbaix Diagram Construction}
-Pourbaix diagrams were constructed to map the thermodynamic stability regions of bulk metals and their metal-ligand complexes under electrolysis of waste activated sludge (EWAS) potentials in basic environment. Free energies of bulk metals were obtained from the Materials Project database \cite{Jain2013TheInnovation}, based on generalized gradient approximation (GGA) density functional theory (DFT) calculations. Free energies for aqueous ligands and metal-ligand complexes were sourced from standard thermochemical handbooks \cite{MartellCriticalSupplement, Smith1976CriticalConstants, Bard2017StandardSolution} and literatures \cite{Meng1996PrinciplesReview, Azadi2019DataComplexes, Aviles2022ExploringNH3, Oraby2023SelectiveSolutions}. Metal elements that are traditionally used as electrode materials are considered in this study, including Au, Cu, Ni, Co, Mg, Mn, Ti, Zn, Ag, Cd, Sr, Pt, Pd and Fe. The aqueous ligands considered in this study include \ce{NH3-}, glycine and \ce{CN-}. The targeted experimental potential ranges from -2.0-2.3 V (vs RHE) and the pH ranges from 11.5-13.5.
+Pourbaix diagrams were constructed to map the thermodynamic stability regions of bulk metals and their metal-ligand complexes under electrolysis of waste activated sludge (EWAS) potentials in basic environment. Free energies of bulk metals were obtained from the Materials Project database \cite{Jain2013TheInnovation}, based on generalized gradient approximation (GGA) density functional theory (DFT) calculations. Free energies for aqueous ligands and metal-ligand complexes were calculated from equilibrium constants sourced from standard thermochemical handbooks \cite{MartellCriticalSupplement, Smith1976CriticalConstants, Bard2017StandardSolution} and literatures \cite{Meng1996PrinciplesReview, Azadi2019DataComplexes, Aviles2022ExploringNH3, Oraby2023SelectiveSolutions}. Metal elements that are traditionally used as electrode materials are considered in this study, including Au, Cu, Ni, Co, Mg, Mn, Ti, Zn, Ag, Cd, Sr, Pt, Pd and Fe. The aqueous ligands considered in this study include \ce{NH3-}, glycine and \ce{CN-}. The targeted experimental potential ranges from -2.0-2.3 V (vs RHE) and the pH ranges from 11.5-13.5.
 
 \begin{equation} \label{eq:reaction}
 aA + h\text{H}^+ + z\text{e}^- \leftrightarrow bB + \text{H}_2\text{O}
@@ -168,44 +171,94 @@ Similarly, glycine and \ce{CN-} concentrations were calculated using Equations~\
 The interdependence of pH and ligand concentration (e.g., due to \ce{NH3} equilibrium in Equation~\eqref{eq:NH3 equilibrium}) was explicitly modeled. It was further assumed that ligand concentrations were unaffected by other ligands or external factors. For example, when both \ce{NH3} and \ce{CN-} were present, their equilibrium concentrations were treated as independent functions of pH.
 
 
-% \begin{equation} \label{eq:pligand}
-% \text{pligand}=-log[\text{ligand}]
-% \end{equation}
-
-% To extend the Pourbaix diagram framework to systems containing nitrogen-based ligands (e.g., \ce{NH3}, glycine and \ce{CN-}), ligand concentrations are incorporated into pH-dependent mass balance Equations~\eqref{eq:pNH3}, \eqref{eq:pGly}, and \eqref{eq:pCN}, where the concentration of the ligand is represented by pligand in Equation ~\eqref{eq:pligand}. pH and p\ce{NH3} are not independent due to the equilibrium in Equation \eqref{eq:NH3 equilibrium} \cite{Murase1999PotentialpHBaths}.
-
-% It is assumed that the concentrations of nitrogen ligands are solely dependent on pH and not influenced by other ligands or external factors. For instance, when both \ce{NH3} and \ce{CN-} are present, their equilibrium concentrations are determined independently as functions of pH. 
 
 \section{Results and discussion}
+The constructed Pourbaix diagrams are shown in Figure 
+
 A pourbaix diagram of the xxx system with tot concentration of xxxx M is shown inxxx. Ammine complaxed with ions with xx number of coordinated ammonia is known to form xxx. 
 
 
 The Pourbaix diagram of Ni-\ce{NH3}-Gly-\ce{H2O} and Ni-\ce{H2O} is shown in Fig. \ref{Ni Pourbaix diagram}. From the comparison, we can see that the addition of N-ligands significantly affects the stability of Ni bulk species and aqueous species. N-ligands can form Ni-ligand complexes that have more stable thermodynamic free energies than some bulk species, therefore changing the stability domains of solid Ni oxides. The intended experimental conditions for the current experiments is bounded by the green box in Fig.\ref{Ni Pourbaix diagram}. We can see that the bulk Ni electrode is likely to be complexed by Gly ligand under the experimental condition, since the metal-ligand complex is more thermodynamically stability than other species and can form over the intended experimental conditions. The stable regions of Ni's metal-ligands complexes over the range of applied potential and pH partially explain Ni's dissolvation under oxidizing potential and high ammonia concentration observed in experiments from a thermodynamics perspective, although a more thorough kinetics study should be performed to determine if the thermodynamics free energy is the main driving force of dissolution. 
 
 The Pourbaix diagram of other common metals that can be used as electrode in electrochemistry experiments are shown in Figs. x to x. From a thermodynamics perspective, these metal can all complex with N-ligands under intended experimental conditions, besides Ti. 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{Figures/paper/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-  \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-  \label{Ni Pourbaix diagram}
+\begin{figure}[htbp]
+    \centering
+    % Subfigure (a)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \caption{}\label{fig:Ni_Pourbaix}
+        \par\medskip
+    \end{subfigure}
+    % Subfigure (b)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \caption{}\label{fig:Au_Pourbaix}
+        \par\medskip
+    \end{subfigure}
+    % Subfigure (c)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \caption{}\label{fig:Cu_Pourbaix}
+        \par\medskip
+        
+    \end{subfigure}
+    % Subfigure (d)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \caption{}\label{fig:Ti_Pourbaix}
+    \end{subfigure}
+    % Subfigure (e)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \caption{}\label{fig:Pd_Pourbaix}
+    \end{subfigure}
+    % Subfigure (f)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \caption{}\label{fig:Pt_Pourbaix}
+    \end{subfigure}
+
+    \caption{Pourbaix diagrams for different metals at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
+    \label{fig:Pourbaix_all}
 \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{Figures/paper/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-  \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-  \label{Au Pourbaix diagram}
-\end{figure}
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
+%   \label{Ni Pourbaix diagram}
+% \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{Figures/paper/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-  \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-  \label{Ti Pourbaix diagram}
-\end{figure}
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
+%   \label{Au Pourbaix diagram}
+% \end{figure}
 
-\begin{figure}
-\includegraphics[width=0.5\textwidth]{Figures/paper/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-  \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
-  \label{Cu Pourbaix diagram}
-\end{figure}
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
+%   \label{Cu Pourbaix diagram}
+% \end{figure}
+
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
+%   \label{Ti Pourbaix diagram}
+% \end{figure}
+
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
+%   \label{Pd Pourbaix diagram}
+% \end{figure}
+
+% \begin{figure}
+% \includegraphics[width=0.5\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%   \caption{Ni Pourbaix diagram at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH =11.5 to 13.5}
+%   \label{Pt Pourbaix diagram}
+% \end{figure}
+
+
 
 
 \section{Conclusion}
@@ -391,10 +444,8 @@ Pourbaix diagrams of metal-\ce{NH3}/glycine/\ce{CN-}-\ce{H2O} are generated and 
 %% suppinfo environment.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{suppinfo}
+Free energies of metal-ligand complexes are available.
 
-This will usually read something like: ``Experimental procedures and
-characterization data for all new compounds. The class will
-automatically add a sentence pointing to the information on-line:
 
 \end{suppinfo}
 
