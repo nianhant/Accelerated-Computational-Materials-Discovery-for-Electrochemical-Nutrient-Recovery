@@ -1,0 +1,59 @@
+\documentclass[journal=jacsat,manuscript=article,email=false]{achemso}
+
+\usepackage[version=4]{mhchem} % Formula subscripts using \ce{}
+\usepackage{esint}
+\usepackage{threeparttable}
+\usepackage{xr-hyper} % hyperlinks
+\usepackage{hyperref} % hyperlinks
+\usepackage{cleveref}
+\usepackage{fancyhdr}
+\usepackage[numbers]{natbib}
+% To number sections, pages, figures and tables nested within chapters:
+% \renewcommand{\thepage}{\arabic{chapter}.\arabic{page}} 
+% \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}  
+% \renewcommand{\thetable}{\arabic{chapter}.\arabic{table}}  
+% \renewcommand{\thefigure}{\arabic{chapter}.\arabic{figure}}
+
+% To number supplemental material with 'S':
+% \renewcommand{\thepage}{S\arabic{page}} 
+\renewcommand{\thesection}{S\arabic{section}}  
+\renewcommand{\thetable}{S\arabic{table}}  
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\theequation}{S\arabic{equation}}
+
+\usepackage{longtable} % For multi-page tables
+\usepackage{array}
+
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{S\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+
+\author{Nianhan Tian}
+\affiliation[Georgia Institute of Technology]
+{School of Chemical and Biomolecular Engineering, Georgia Institute of Technology, Atlanta, Georgia 30318 USA}
+
+\author{Andrew J. Medford}
+\affiliation[Georgia Institute of Technology]
+{School of Chemical and Biomolecular Engineering, Georgia Institute of Technology, Atlanta, Georgia 30318 USA}
+\email{ajm@gatech.edu}
+
+\title{Accelerated Computational Materials Discovery for Electrochemical Nutrient Recovery\\\vspace{8pt}\large{Supporting Information}}
+
+
+\begin{document}
+\newpage
+\input{data/ligand/NH3_complex_energy_table.tex}
+
+\newpage
+\input{data/ligand/Gly[1-]_complex_energy_table.tex}
+
+\newpage
+\input{data/ligand/CN[1-]_complex_energy_table}
+
+\newpage
+\input{data/metal/Fe_energy_table}
+\bibliography{references_mendeley_pourbaix}
+
+\end{document}
