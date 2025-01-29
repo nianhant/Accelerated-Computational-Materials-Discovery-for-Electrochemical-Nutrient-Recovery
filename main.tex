@@ -180,18 +180,20 @@ Add metal-H2O to visualize how N-ligands affect corrosion.
 % CN = 0
 The constructed Pourbaix diagrams are shown in Figure \ref{fig:Pourbaix_NH3_Gly}. The ion activity is set to $10^{-4}$ mol/L. The initial (total?) \ce{NH3} concentration is set at 0.02 mol/L, and glycine at 0.005 mol/L. The targeted range for applied potential and solution pH is indicated by the green box in each diagram. Therefore we are interested in the stability of species in the region bounded by this range of potential and pH values. The presence of any aqueous ion or metal-ligand complex stability domain in this interested region indicates its thermodynamic favorable corrosion under the targeted condition. 
 
-
+\cite{}
 % divide discussion into immunity, passivation and corrosion. 
 % immunity domain -> pure metal; passivation -> metal oxides; corrosion -> aqeuous ions. 
 Discussion on Ni. In the targeted experimental condition, Ni displays a passivation region in a slightly alkaline condition. However, if the solution becomes more acidic, Ni enters the corrosion domain, where it forms more stable Ni-glycine complexes. Therefore the pH of the solution must in controlled carefully to prevent the formation of stable Ni-glycine complexes. 
 
-Discussion on Ti. 
+Discussion on how N-ligands affect corrosion.
+
+Discussion on NH3 effect. 
 
 
-Discussion on Ti. 
+Discussion on glycine effect. 
 
 
-Discussion on Ti. 
+Discussion on CN effect. 
 
 
 Discussion on Ti. 
@@ -211,14 +213,12 @@ The Pourbaix diagram of other common metals that can be used as electrode in ele
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Ni_Pourbaix}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        
         \par\medskip
     \end{subfigure}
     % Subfigure (b)
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Au_Pourbaix}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        
         \par\medskip
     \end{subfigure}
     % Subfigure (c)
@@ -226,8 +226,7 @@ The Pourbaix diagram of other common metals that can be used as electrode in ele
         \subcaption{}\label{fig:Cu_Pourbaix}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
         
-        \par\medskip
-        
+        \par\medskip   
     \end{subfigure}
     % Subfigure (d)
     \begin{subfigure}[b]{0.3\textwidth}
@@ -249,7 +248,46 @@ The Pourbaix diagram of other common metals that can be used as electrode in ele
     \label{fig:Pourbaix_NH3_Gly}
 \end{figure}
 
+\begin{figure}[htbp]
+    \centering
+    % Subfigure (a)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Ni_Pourbaix}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \par\medskip
+    \end{subfigure}
+    % Subfigure (b)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Au_Pourbaix}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \par\medskip
+    \end{subfigure}
+    % Subfigure (c)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Cu_Pourbaix}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        
+        \par\medskip   
+    \end{subfigure}
+    % Subfigure (d)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \subcaption{}\label{fig:Ti_Pourbaix}
+    \end{subfigure}
+    % Subfigure (e)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \subcaption{}\label{fig:Pd_Pourbaix}
+    \end{subfigure}
+    % Subfigure (f)
+    \begin{subfigure}[b]{0.3\textwidth}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \subcaption{}\label{fig:Pt_Pourbaix}
+    \end{subfigure}
 
+    \caption{Pourbaix diagrams for different metals at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
+    \label{fig:Pourbaix_NH3_Gly}
+\end{figure}
 
 
 
