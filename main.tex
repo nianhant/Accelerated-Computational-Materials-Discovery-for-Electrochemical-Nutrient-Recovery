@@ -177,21 +177,21 @@ The interdependence of pH and ligand concentration (e.g., due to \ce{NH3} equili
 
 \section{Results and discussion}
 % Add metal-H2O to visualize how N-ligands affect corrosion.
-The constructed Pourbaix diagrams for Ni, Pd, Pt, Cu and Ti are shown in Figures \ref{fig:Ni_Pourbaix}, \ref{fig:Pd_Pourbaix}, \ref{fig:Pt_Pourbaix}, \ref{fig:Cu_Pourbaix} and \ref{fig:Ti_Pourbaix}, respectively. The ion activity is set to \num{10e-4} M. The targeted operating potential is from -2 to 2V vs RHE, due to pulsing. The targeted pH is from 11.5 to 13.5. The interested stability domains are bounded by  this range of potential and pH values. The presence of any aqueous ion or metal-ligand complex stability domain in this interested region indicates it probability to corrosion due to thermodynamics under the targeted condition. 
+The constructed Pourbaix diagrams for Ni, Pd, Cu, Ti, and Pt are shown in Figures \ref{fig:Ni_Pourbaix}, \ref{fig:Cu_Pourbaix}, \ref{fig:Pd_Pourbaix}, and \ref{fig:Ti_Pt_Pourbaix}, respectively. The ion activity is set to \num{10e-4}M. The targeted operating potential is from -2 to 2V vs RHE, due to pulsing. The targeted pH is from 11.5 to 13.5. The interested stability domains are bounded by  this range of potential and pH values. The presence of any aqueous ion or metal-ligand complex stability domain in this interested region indicates it probability to corrosion due to thermodynamics under the targeted condition. 
 
 From the Pourbaix diagrams, i.e. Figure \ref{fig:Ni_Pourbaix}, the immunity/stability, passivation and corrosion regions are affected by the presence of N-ligands. While in aqueous environment with only \ce{H2O} Ni can remain corrosion resistant at an oxidative potential of 2V vs RHE and pH as high as 13, it could complex with Gly ligands and form \ce{[Ni(Gly)3^-]} and lead to corrosion into the solution. The effect of the \ce{CN-} ligand is even more prominent, although at low concentration of \num{1e-4}M, resulting the formation \ce{[Ni(CN)4^2-]} of during the targeted potential and pH region. Since the experiment is operated with pulsing potential that alternated between reductive and oxidative potentials, the corrosion of the Ni electrode into cyanide complexes would be inevitable. Due to the toxicity of cyanide\cite{Bhattacharya2009CyanideTreatment}, the use of Ni as electrode for EWAS should be avoided. 
 
-Similarly, Cu exhibits excellent resistance to corrosion under aqueous conditions, even at oxidative potentials and alkaline pH up to 14, from Figure \ref{fig:Cu_Pourbaix_H2O}. However, the stability regions of Cu and its oxides correspondingly decrease with the addition of N-ligands\cite{Wang2022ThermodynamicDiagrams}
-. At higher glycine concentration, insert higher figure, Cu is more prone to corrosion, with a smaller stability domain. Since EWAS is highly likely to operate under high amino acid concentration, high glycine concentration in the solution is foreseeable. Similar to Ni, small concentration of \ce{CN-} ligands can result in corrosion of Cu in the targeted operation domain. The stable formation of \ce{[Cu(CN)3]^2-}, in Figure \ref{fig:Cu_Pourbaix_NH3_Gly_CN}, is likely due to the pulsing potential. Therefore, to use Cu as the electrode, we have to adjust the solution composition carefully to avoid corrosion of the electrode and formation of toxic cyanide complexes. 
+
+
+Similarly, Cu exhibits excellent resistance to corrosion under aqueous conditions, even at oxidative potentials and alkaline pH up to 14, from Figure \ref{fig:Cu_Pourbaix_H2O}. However, the stability regions of Cu and its oxides correspondingly decrease with the addition of N-ligands\cite{Wang2022ThermodynamicDiagrams}. At higher glycine concentration, insert higher figure, Cu is more prone to corrosion, with a smaller stability domain. Since EWAS is highly likely to operate under high amino acid concentration, high glycine concentration in the solution is foreseeable. Similar to Ni, small concentration of \ce{CN-} ligands can result in corrosion of Cu in the targeted operation domain. The stable formation of \ce{[Cu(CN)3]^2-}, in Figure \ref{fig:Cu_Pourbaix_NH3_Gly_CN}, is likely due to the pulsing potential. Therefore, to use Cu as the electrode, we have to adjust the solution composition carefully to avoid corrosion of the electrode and formation of toxic cyanide complexes. 
 
 % discussion on Pt and Pd. Controversies over Pt and Pd CN complexes stability constants. Display Pt CN with new stability constants here. 
+Constructed Pd Pourbaix diagrams are shown in Figure \ref{fig:Pd_Pourbaix}. Pd-Gly complex reference. The targeted \ce[NH3] and glycine ligand concentration does not have an affect on Pd's stability in the targeted potential and pH ranges. Glycine ligands can complex with Pd but they are not very thermodynamically stable, resulting in low stability constants of \ce{[Pd(Gly)^+]} and \ce{[Pd(Gly)2]}. Therefore the immunity and passivation region of Pd is not affected by addition of \ce{NH3} and glycine ligands. On the other hand, a small concentration of \ce{CN-} ligands at \num{1e-4}M can decrease the stability domain of Pd over the targeted potential and pH values, as seen in Figure \ref{fig:Pd_Pourbaix_NH3_Gly_CN}. This figure is generated by using an updated stability constant of \ce{[Pd(CN)4^2+]} $log\beta_4=62.3$ by Harrington et al.\cite{Harrington2005DeterminationIon}. Due to experimental setup and conditions to determine the stability constants of this tetracyano complex, different stability constants ranging from 42.2\cite{Smith1989CriticalConstants} to 63\cite{Cabbiness1969MacrocyclicComplexes} have been reported. The Pourbaix diagram of Pd using the more widely referenced stability constant $log\beta_4=42.4$ by Smith et al.\cite{Smith1989CriticalConstants} is shown in Figure 
+\ref{fig:Pd_Pourbaix_Smith1989CriticalConstants_SI} of SI. This value is deemed incorrect by Harrington et al. because the electrohcemical potentials recorded corresponding to this value was not the equilibrium potentials. The stability region of \ce{[Pd(CN)4^2+]} is rather small at this stability constant, and Pd seems to be resistant to corrosion in the targeted potential and pH ranges. However, given the potential incorrectness in the study where the stability constant is obtained, and the cost of Pd electrodes, it is best to avoid the thermodynamically stable formation of the \ce{[Pd(CN)4^2+]} complexes in aqueous solution.
 
-% divide discussion into immunity, passivation and corrosion. 
-% immunity domain -> pure metal; passivation -> metal oxides; corrosion -> aqeuous ions. 
-Discussion on Ni. In the targeted experimental condition, Ni displays a passivation region in a slightly alkaline condition. However, if the solution becomes more acidic, Ni enters the corrosion domain, where it forms more stable Ni-glycine complexes. Therefore the pH of the solution must in controlled carefully to prevent the formation of stable Ni-glycine complexes. 
+The Pourbaix diagram of Pt with \ce{NH3}, glycine and \ce{CN-} ligand concentrations is shown in Figure \ref{fig:Pt_Pourbaix_NH3_Gly_CN}. The stability constant of \ce{[Pt(CN)4^2+]} used here is 41\cite{Smith1989CriticalConstants}, which is also debatable since the recorded potential was not the equilibrium potential\cite{Hancock1976FormationTetrakiscyanopalladate2-}, the same source of error in the study of \ce{[Pd(CN)4^2+]}. No exact value has been reported due to difficulties in determining very large stability constants. However, spectrophotometric study indicated that the $log\beta_4$ value for \ce{[Pt(CN)4^2+]} is much larger than 41, between 65 and 75. The Pourbaix diagram of Pt-\ce{NH3}-glycine-\ce{CN-} with the approximated \ce{[Pd(CN)4^2+]} stability constant of 70 is shown in Figure \ref{fig:Pt_Pourbaix_Harrington_SI}. The \ce{[Pt(CN)4^2+]} stability domain can cover a wide range of pH, from acidic to alkaline. The stability domain also overlaps with the pulsing potential from -2 to 2V, which may cause corrosion of electrode in this region, thermodynamically. The \ce{[Pd(CN)4^2+]} complex is planar and diamagnetic, indicating a high degree of stability due to the strong bonding between \ce{Pt^2+} and the cyanide ligands\cite{Griffith1962CyanideMetals}, which stabilizes the low oxidation state of Pt. Similar to Pd, due to the high cost of material and experimentation with potential Pt corrosion into aqueous ions, Pt is not a thermodynamically stable electrode for EWAS. 
 
-
-
+Ti's Pourbaix diagram is 
 Discussion on Ti. 
 Cite this: the very high acidity of the Ti4+ aquous ion and the high acidity of the Ti3+ aqueous ion relative to that of HCN militate against the preparation of cyanide complexes of titanium in aqueous solution\cite{Nicholls1980ComplexTitanium}.
 
@@ -275,36 +275,53 @@ The Pourbaix diagram of other common metals that can be used as electrode in ele
     \caption{Pd Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, (b)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, (c)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, $[\ce{CN-}]_{initial}=\num{1e-4}M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
     \label{fig:Pd_Pourbaix}
 \end{figure}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure}[htbp]
+%     \centering
+%     \begin{subfigure}[b]{0.3\textwidth}
+%         \subcaption{}\label{fig:Pt_Pourbaix_H2O}
+%         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
+%         \par\medskip
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.3\textwidth}
+%         \subcaption{}\label{fig:Pt_Pourbaix_NH3_Gly}
+%         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+%         \par\medskip
+%     \end{subfigure}
+%     \begin{subfigure}[b]{0.3\textwidth}
+%         \subcaption{}\label{fig:Pt_Pourbaix_NH3_Gly_CN}
+%         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+%         \par\medskip   
+%     \end{subfigure}
+
+%     \caption{Pt Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, (b)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, (c)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, $[\ce{CN-}]_{initial}=\num{1e-4}M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
+%     \label{fig:Pt_Pourbaix}
+% \end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pt and Ti %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
     \centering
-    \begin{subfigure}[b]{0.3\textwidth}
-        \subcaption{}\label{fig:Pt_Pourbaix_H2O}
-        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \subcaption{}\label{fig:Ti_Pourbaix_NH3_Gly_CN}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
         \par\medskip
     \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
-        \subcaption{}\label{fig:Pt_Pourbaix_NH3_Gly}
-        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
-        \par\medskip
-    \end{subfigure}
-    \begin{subfigure}[b]{0.3\textwidth}
+    \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Pt_Pourbaix_NH3_Gly_CN}
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
         \par\medskip   
     \end{subfigure}
-
-    \caption{Pt Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, (b)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, (c)$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, $[\ce{CN-}]_{initial}=\num{1e-4}M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
-    \label{fig:Pt_Pourbaix}
+    \caption{Pourbaix diagrams of (a) Ti, (b) Pt. $\text{ion activity}=\num{1e-4}$, $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, $[\ce{CN-}]_{initial}=\num{1e-4}M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
+    \label{fig:Ti_Pt_Pourbaix}
 \end{figure}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ti %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{figure}
-    \centering
-    \includegraphics[width=0.6\linewidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
-    \caption{Ti Pourbaix diagram, with with $\text{ion activity}=\num{1e-4}$,$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, $[\ce{CN-}]_{initial}=\num{1e-4}M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
-    \label{fig:Ti_Pourbaix}
-\end{figure}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ti %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.6\linewidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+%     \caption{Ti Pourbaix diagram, with with $\text{ion activity}=\num{1e-4}$,$[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$, $[\ce{CN-}]_{initial}=\num{1e-4}M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
+%     \label{fig:Ti_Pourbaix}
+% \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% NH3 and Gly only %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \begin{figure}[htbp]
 %     \centering
@@ -616,7 +633,7 @@ Free energies of metal-ligand complexes are available.
 
 
 \end{suppinfo}
-
+% \input{SI.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The appropriate \bibliography command should be placed here.
 %% Notice that the class file automatically sets \bibliographystyle

@@ -8,6 +8,9 @@
 \usepackage{cleveref}
 \usepackage{fancyhdr}
 \usepackage[numbers]{natbib}
+% \usepackage[draft]{graphicx}
+% \usepackage{amsmath}
+% \usepackage{refcheck}
 % To number sections, pages, figures and tables nested within chapters:
 % \renewcommand{\thepage}{\arabic{chapter}.\arabic{page}} 
 % \renewcommand{\thesection}{\arabic{chapter}.\arabic{section}}  
@@ -104,6 +107,13 @@
     \label{fig:Pd_Pourbaix_NH3_Gly_SI}
 \end{figure}
 
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity_Smith1989CriticalConstants_Pd_42.4=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+    \caption{Pourbaix diagram for Pd at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
+    \label{fig:Pd_Pourbaix_Smith1989CriticalConstants_SI}
+\end{figure}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pt %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
     \centering
@@ -127,7 +137,7 @@
     \centering
     \includegraphics[width=0.7\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity_Harrington_Pt_70=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
     \caption{Pourbaix diagram for Pt at $[NH_3]_{initial}= 0.02M$, $[Gly]_{initial}=0.005M$. With new stability constant around 70. Green box indicates experimental condition at applied potential vs RHE = -2 to 2 V, pH = 11.5 to 13.5.}
-    \label{fig:Pt_Pourbaix_NH3_Gly_SI}
+    \label{fig:Pt_Pourbaix_Harrington_SI}
 \end{figure}
 
 \newpage
@@ -140,7 +150,7 @@
 \input{data/ligand/CN[1-]_complex_energy_table}
 
 \newpage
-\input{data/metal/Fe_energy_table}
+% \input{data/metal/Fe_energy_table}
 \bibliography{references_mendeley_pourbaix}
 
 \end{document}
