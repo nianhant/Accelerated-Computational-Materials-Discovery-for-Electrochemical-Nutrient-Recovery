@@ -114,7 +114,7 @@ Existing EWAS methods often rely on high applied cell voltages (5–30 V) to dri
 
 However, these alternating conditions impose new demands on electrode stability. Materials must endure not only strong oxidative potentials but also the mechanical and chemical stresses from repeated redox cycling. These challenges are further compounded by the high pH of typical EWAS operations, which can accelerate corrosion and dissolution \cite{Sanchis2022NitrateOverview, Popov2015ThermodynamicsCorrosion, Kapaka2010ElectrochemicalElectrode, Mucalo2004InSolutions, Aksu2001ElectrochemistrySolutions, OConnor2018ElectrochemicalSolutions}. Additionally, competition between nitrogen oxidation reactions and the oxygen evolution reaction (OER) further compromises catalytic performance \cite{Li2021Ru-DopedNitrate, Wang2022ElectrochemicalOxidation, Dai2020ElectrochemicalOxides}.
 
-In nitrogen-rich sludge environments, reactive nitrogen species such as ammonia (\ce{NH3}), glycine, and cyanide (\ce{HCN}) can coordinate with metal sites to form soluble complexes, promoting leaching and surface degradationm\cite{Bjerrum1957StabilitySubstances, Meng1996PrinciplesReview, Wang2022AmmoniaSystem}. Although such metal-ligand interactions have been extensively characterized in hydrometallurgical systems \cite{Han1974AMMONIA-AMMONIUMNODULES, Bhuntumkomol1982TheSolutions, Azadi2021SustainableGlycine, Oraby2020GoldPermanganate, Sarvar2023ApplicationStructure, SPARROW1995CyanideApplications, Akcil2015PreciousReview}, these studies differ significantly from EWAS conditions, where ligand concentrations are lower and variable electrochemical driving forces influence material stability.
+In nitrogen-rich sludge environments, reactive nitrogen species such as ammonia (\ce{NH3}), glycine, and cyanide (\ce{HCN}) can coordinate with metal sites to form soluble complexes, promoting leaching and surface degradation \cite{Bjerrum1957StabilitySubstances, Meng1996PrinciplesReview, Wang2022AmmoniaSystem}. With the exception of molybdenum, most transition metals are susceptible to leaching due to their tendency to form water-soluble complexes with nitrogen-containing ligands \cite{Meng1996PrinciplesReview, Ma2021ALeaching, Wang2020Reduction-ammoniacalSalts, Li2025Glycine-mediatedStudy}. Although such metal-ligand interactions have been extensively characterized in hydrometallurgical systems \cite{Han1974AMMONIA-AMMONIUMNODULES, Bhuntumkomol1982TheSolutions, Azadi2021SustainableGlycine, Oraby2020GoldPermanganate, Sarvar2023ApplicationStructure, SPARROW1995CyanideApplications, Akcil2015PreciousReview, Wang2022AmmoniaSystem, Ma2021ALeaching, Wang2020Reduction-ammoniacalSalts, Li2025Glycine-mediatedStudy}, these studies differ significantly from EWAS conditions, where ligand concentrations are lower and variable electrochemical driving forces influence material stability.
 
 Therefore, to advance EWAS technologies, it is essential to develop a mechanistic understanding of catalyst degradation in nitrogen-rich, alkaline environments under cyclic oxidative and reductive potentials. The interplay between electrochemical cycling and ligand-induced leaching presents a key obstacle to long-term sustainability and highlights the need for screening approaches that incorporate both thermodynamic stability and practical operation conditions.
 
@@ -193,7 +193,9 @@ Similarly, glycine and \ce{CN-} concentrations were calculated using Equations~\
 
 The interdependence of pH and ligand concentration (e.g., due to \ce{NH3} equilibrium in Equation~\eqref{eq:NH3 equilibrium}) was modeled using these equations, which also include the assumption that ligand concentrations are unaffected by other ligands or external factors. For example, when both \ce{NH3} and \ce{CN-} were present, their equilibrium concentrations were treated as independent functions of pH.
 
-Although cyanide is not deliberately introduced in EWAS systems, it is included in our analysis because it may arise as a transient intermediate during the electrochemical oxidation of organic nitrogen species \cite{Oraby2020GoldPermanganate, Chen2013AdsorptionStudy, Huerta1997ElectrochemicalPt111, Sandoval2011AdsorptionStudy}. Cyanide is a strong-field ligand with a high affinity for transition metals, and its formation can significantly alter metal speciation and dissolution behavior. Previous spectroscopic studies further indicate that cyanide can be oxidized to cyanate under electrochemical conditions \cite{Paulissen1992InfraredConditions, Hinman1986FourierElectrodes, Kitamura1986OxidationSpectroscopy, Chen2013AdsorptionStudy}. Therefore, incorporating \ce{CN^-} into the Pourbaix framework provides a conservative and mechanistically informed evaluation of electrode stability under nitrogen-rich, alkaline, and redox-dynamic conditions relevant to EWAS.
+
+Although cyanide is not deliberately introduced in EWAS systems, it is included in our analysis because it may arise as a transient intermediate during the electrochemical oxidation of organic nitrogen species \cite{Oraby2020GoldPermanganate, Chen2013AdsorptionStudy, Huerta1997ElectrochemicalPt111, Sandoval2011AdsorptionStudy}. Cyanide is a strong-field ligand with a high affinity for transition metals, and its formation can significantly influence metal speciation and dissolution behavior. Prior spectroscopic studies further indicate that \ce{CN^-} can be electrochemically oxidized to cyanate under certain conditions \cite{Paulissen1992InfraredConditions, Hinman1986FourierElectrodes, Kitamura1986OxidationSpectroscopy, Chen2013AdsorptionStudy}. Moreover, cyanide poses serious environmental and health hazards due to its extreme toxicity~\cite{xing2018simple, mekuto2016integrated, bruger2018volatilisation}. Therefore, incorporating \ce{CN^-} into the Pourbaix framework provides a conservative and mechanistically informed evaluation of electrode stability under nitrogen-rich, alkaline, and redox-dynamic conditions relevant to EWAS.
+
 
 % All code for producing the Pourbaix diagrams is available...
 
@@ -219,33 +221,50 @@ A comprehensive sampling of OER adsorbate was generated on the most stable surfa
 % \end{itemize}
 
 
-We performed thermodynamic screening of a range of pure metals to evaluate their stability under EWAS-relevant conditions. Among the screened candidates, Ti-based materials were found to be the most stable across the full range of electrochemical potentials and pH conditions considered. However, the intrinsically low electronic conductivity of Ti suggests that structural modifications, such as alloying with conductive metals or incorporation into perovskites or MXenes, may be necessary to enhance its functional performance. Other metals, including Ni, Cu, Pt, Pd, Fe, and Mn, exhibit stability only in specific regions of the potential–pH space, particularly in the presence of nitrogen-containing ligands such as NH$_3$ and glycine. These metals may serve as catalytically active components or alloying agents when combined with more corrosion-resistant hosts. The complete set of metals screened includes: Au, Cu, Ni, Co, Mg, Mn, Ti, Zn, Ag, Pt, Pd, and Fe.
+% We performed thermodynamic screening of a range of pure metals to evaluate their stability under EWAS-relevant conditions. Among the screened candidates, Ti-based materials were found to be the most stable across the full range of electrochemical potentials and pH conditions considered. However, the intrinsically low electronic conductivity of Ti suggests that structural modifications, such as alloying with conductive metals or incorporation into perovskites or MXenes, may be necessary to enhance its functional performance. Other metals, including Ni, Cu, Pt, Pd, Fe, and Mn, exhibit stability only in specific regions of the potential–pH space, particularly in the presence of nitrogen-containing ligands such as NH$_3$ and glycine. These metals may serve as catalytically active components or alloying agents when combined with more corrosion-resistant hosts. The complete set of metals screened includes: Ni, Cu, Au, Pd, Pt, Ti, Co, Mg, Mn, Zn, Ag, and Fe. The constructed Pourbaix diagrams for Ni, Cu, Au, Pd, Pt and Ti are shown in Figures \ref{fig:Ni_Pourbaix}, \ref{fig:Cu_Pourbaix}, \ref{fig:Pd_Pourbaix}, and \ref{fig:Ti_Pt_Pourbaix}, respectively. The ion activity is set to \num{10e-4}M. The targeted operating potential is from -2 to 2V vs RHE, due to pulsing, and the pH ranges from 11.5 to 13.5. Stability domains of aqueous species, including metal ions and metal-ligand complexes, within this region indicate the likelihood of electrode corrosion under thermodynamic equilibrium. The Pourbaix diagrams of the rest of the metals can be found in SI. 
+
+We performed thermodynamic screening of a range of pure metals to evaluate their stability under EWAS-relevant conditions. Among the candidates, Ti-based materials were identified as the most stable across the full range of electrochemical potentials and pH values considered. However, the intrinsically low electronic conductivity of Ti suggests that structural modifications, such as alloying with conductive metals or incorporation into perovskites or MXenesm, may be required to enhance its functional performance. Other metals, including Ni, Cu, Pt, Pd, Fe, and Mn, exhibit stability only within specific regions of the potential–pH space, particularly in the presence of nitrogen-containing ligands such as \ce{NH3} and glycine. These metals may serve as catalytically active components or alloying agents when combined with more corrosion-resistant hosts. 
+
+The full set of metals screened includes: Ni, Cu, Au, Pd, Pt, Ti, Co, Mg, Mn, Zn, Ag, and Fe. The constructed Pourbaix diagrams for Ni, Cu, Au, Pd, Pt, and Ti are shown in Figures~\ref{fig:Ni_Pourbaix}, \ref{fig:Cu_Pourbaix}, \ref{fig:Pd_Pourbaix}, and \ref{fig:Ti_Pt_Pourbaix}, respectively. Ion activities were set to \SI{1e-4}{\molar}, and the targeted operating potential range spans from \SI{-2}{V} to \SI{3}{V} vs. RHE to account for the pulsing conditions used in EWAS, with a pH range from -2 to 16. Stability domains of solid bulk species, aqueous species, including metal ions and metal–ligand complexes, within this region indicate the thermodynamic likelihood of electrode corrosion. Pourbaix diagrams for the remaining metals are provided in the Supporting Information.
+
+
 
 % Sr, , Ir, Ru, and Bi
 
 \subsubsection{Nickel (Ni) Stability and Corrosion Behavior}
 
-The Pourbaix diagram for Ni (Figure~\ref{fig:Ni_Pourbaix}) reveals distinct immunity, passivity, and corrosion regions, which are significantly influenced by the presence of nitrogen-containing ligands. In pure aqueous environments (Figure~\ref{fig:Ni_Pourbaix_H2O}), Ni remains corrosion-resistant at oxidative potentials up to 2~V vs. RHE and pH values as high as 13. However, in the presence of glycine (Figure~\ref{fig:Ni_Pourbaix_NH3_Gly}), Ni forms stable complexes such as \ce{[Ni(Gly)_3]^{-}}, leading to dissolution into solution. The effect of cyanide (Figure~\ref{fig:Ni_Pourbaix_NH3_Gly_CN}) is even more pronounced. Even at low concentrations (e.g., \num{1e-4}~M), the formation of \ce{[Ni(CN)_4]^{2-}} becomes thermodynamically favorable across a wide range of potential and pH values relevant to EWAS. Given that EWAS reactors operate under pulsing conditions that alternate between reductive and oxidative potentials, Ni corrosion via cyanide complexation is likely. Furthermore, because nickel and its dissolution products are toxic~\cite{Bhattacharya2009CyanideTreatment}, Ni electrodes should be avoided in EWAS applications where ligand-rich or nitrogen-rich environments are present.
+The Pourbaix diagram for Ni (Figure~\ref{fig:Ni_Pourbaix}) reveals distinct immunity, passivity, and corrosion regions, which are significantly influenced by the presence of nitrogen-containing ligands. In pure aqueous environments (Figure \ref{fig:Ni_Pourbaix_H2O}), Ni remains corrosion-resistant at oxidative potentials up to 2~V vs. RHE and pH values as high as 13. However, in the presence of glycine (Figure \ref{fig:Ni_Pourbaix_NH3_Gly}), Ni forms stable complexes such as \ce{[Ni(Gly)_3]^{-}}, leading to dissolution into solution. This thermodynamic stability of Ni-ammine and Ni-glycine complexes agrees with literature that N-ligands solution is an effective lixiviant for nickel extraction \cite{Meng1996PrinciplesReview, Yao2021SelectivePhosphide, Ma2021ALeaching}. The effect of cyanide (Figure \ref{fig:Ni_Pourbaix_NH3_Gly_CN}) is even more pronounced. Even at low concentrations (e.g., \num{1e-4}~M), the formation of \ce{[Ni(CN)_4]^{2-}} becomes thermodynamically favorable across a wide range of potential and pH values relevant to EWAS. Given that EWAS reactors operate under pulsing conditions that alternate between reductive and oxidative potentials, Ni corrosion via cyanide complexation is likely. Furthermore, because nickel and its dissolution products are toxic \cite{Bhattacharya2009CyanideTreatment}, Ni electrodes should be avoided in EWAS applications where ligand-rich or nitrogen-rich environments are present.
 
 
 \subsubsection{Copper (Cu) Stability and Corrosion Behavior}
 Similarly, Cu exhibits strong resistance to corrosion in aqueous environments, maintaining stability at oxidative potentials and alkaline pH up to 14, as shown in Figure \ref{fig:Cu_Pourbaix_H2O}. However, its passivation can be significantly affected by the presence of glycine as a complexing agent \cite{Wang2022ThermodynamicDiagrams,Tripathi2009FundamentalConstituents,Skrypnikova2008PeculiaritiesAdditives,OConnor2018ElectrochemicalSolutions}. The copper passivation can still occur at pH values $>$ 9, depending on the glycine concentration. Since EWAS conditions likely involve high amino acid concentrations, glycine-induced Cu dissolution is still foreseeable if the operating condition is less alkaline. Moreover, even low concentrations of \ce{CN^-} ligands lead to Cu dissolution, with the formation of stable \ce{[Cu(CN)3]^2-}, particularly under pulsing potential conditions. To utilize Cu as an electrode, the solution composition must be carefully controlled to minimize corrosion and prevent toxic cyanide complex formation.
 
+\subsubsection{Gold (Au) Stability and Corrosion Behavior}
+Figure~\ref{fig:Au_Pourbaix_NH3_Gly} presents the Pourbaix diagram of Au at 298~K with total ammonia and glycine concentrations of 0.02~M and 0.005~M, respectively. As shown, Au can form \ce{[Au(NH3)_2]^+} complexes with ammonia, which are stable over a wide pH range from 4.5 to 14, indicating that gold may undergo leaching in ammoniacal solutions across these conditions. Although no thermodynamically stable Au-glycine complexes are predicted, the potential for dissolution remains significant in the presence of \ce{NH3}. Furthermore, as shown in Figure\ref{fig:Au_Pourbaix_NH3_Gly_CN}, \ce{[Au(CN)_2]^-} complexes can form even at low \ce{CN^-} concentrations (e.g., \num{1e-4}~M), which is consistent with the long-standing use of cyanide in gold leaching for ore treatment due to its high recovery efficiency, robustness, and low cost \cite{Hilson2006AlternativesFuture, young2001cyanide}.
+
+Despite its susceptibility to complexation and dissolution, Au has demonstrated notable activity toward glycine oxidation in previous studies \cite{Sandoval2011AdsorptionStudy, Chen2013AdsorptionStudy, Zou1999GoldIII-inducedGlycine}, Exploring the activity and stability of gold alloys as a potential electrode material under practical EWAS operating conditions may offer insights into strategies for enhancing performance while mitigating corrosion.
+
+
+
 \subsubsection{Palladium (Pd) Stability and Cyanide Complex Formation} 
 % discussion on Pt and Pd. Controversies over Pt and Pd CN complexes stability constants. Display Pt CN with new stability constants here. 
+
 The Pourbaix diagrams for Pd (Figure \ref{fig:Pd_Pourbaix}) indicate that at the targeted \ce{NH3} and glycine concentrations, Pd remains stable across the operating potential and pH ranges. While Pd can form glycine complexes, these are thermodynamically weak, with low stability constants for \ce{[Pd(Gly)^+]} and \ce{[Pd(Gly)2]}. As a result, Pd’s immunity and passivity regions remain largely unaffected by glycine and ammonia ligands. However, even at a low \ce{CN^-} concentration of \num{1e-4}~M, Pd stability decreases significantly due to the formation of \ce{[Pd(CN)4^2+]} (Figure \ref{fig:Pd_Pourbaix_NH3_Gly_CN}).
 
 Notably, the reported stability constants for \ce{[Pd(CN)4^2+]} vary widely, with values ranging from $log\beta_4 = 42.2$\cite{Smith1989CriticalConstants} to $log\beta_4 = 63$\cite{Cabbiness1969MacrocyclicComplexes}. The Pourbaix diagram in Figure \ref{fig:Pd_Pourbaix_NH3_Gly_CN} is based on an updated stability constant of $log\beta_4 = 62.3$, as determined by Harrington et al. \cite{Harrington2005DeterminationIon}. Harrington’s study suggests that earlier stability constant values, such as $log\beta_4 = 42.4$ reported by Smith et al. \cite{Smith1989CriticalConstants}, were inaccurate due to incorrect electrochemical potential measurements. Given these uncertainties and the high cost of Pd electrodes, avoiding conditions that promote \ce{[Pd(CN)4^2+]} formation is advisable.
 
+To further assess whether alloying could mitigate Pd’s susceptibility to cyanide complexation, we also investigated Pd–Au alloys. Thermodynamic (and surface phase) analysis of Pd–Au alloys is discussed in the following section.
+
+
 \subsubsection{Platinum (Pt) Stability and Cyanide Complexation} 
-The Pourbaix diagram for Pt in the presence of \ce{NH3} and \ce{CN^-} ligands is shown in Figure \ref{fig:Pt_Pourbaix_NH3_Gly_CN}. No reliable stability constants for \ce{Pt^2+}-glycine complexes have been found\cite{Kiss1991CriticalGlycine}. The stability constant for \ce{[Pt(CN)4^2+]} is reported as $log\beta_4 = 41$\cite{Smith1989CriticalConstants}, but this value is debatable, as it was determined under non-equilibrium conditions\cite{Hancock1976FormationTetrakiscyanopalladate2-}. Spectrophotometric studies suggest a much higher value, likely between 65 and 75. Using an estimated stability constant of $log\beta_4 = 70$, the Pourbaix diagram in Figure ~S2 shows that \ce{[Pt(CN)4^2+]} forms across a wide pH range, overlapping with the pulsing potential range (-2 to 2~V). Given its planar, diamagnetic structure, \ce{[Pt(CN)4^2+]} is among the most stable cyanide complexes\cite{Griffith1962CyanideMetals}. As with Pd, the high cost of Pt and potential corrosion in cyanide-containing solutions make it an unsuitable electrode for EWAS.
+The Pourbaix diagram for Pt in the presence of \ce{NH3} and \ce{CN^-} ligands is shown in Figure \ref{fig:Pt_Pourbaix_NH3_Gly_CN}. No reliable stability constants for \ce{Pt^2+}-glycine complexes have been found\cite{Kiss1991CriticalGlycine}. The stability constant for \ce{[Pt(CN)4^2+]} is reported as $log\beta_4 = 41 $\cite{Smith1989CriticalConstants}, but this value is debatable, as it was determined under non-equilibrium conditions\cite{Hancock1976FormationTetrakiscyanopalladate2-}. Spectrophotometric studies suggest a much higher value, likely between 65 and 75. Using an estimated stability constant of $log\beta_4 = 70$, the Pourbaix diagram in Figure ~S2 shows that \ce{[Pt(CN)4^2+]} forms across a wide pH range, overlapping with the pulsing potential range (-2 to 2~V). Given its planar, diamagnetic structure, \ce{[Pt(CN)4^2+]} is among the most stable cyanide complexes\cite{Griffith1962CyanideMetals}. As with Pd, the high cost of Pt and potential corrosion in cyanide-containing solutions make it an unsuitable electrode for EWAS.
 
 \subsubsection{Titanium (Ti) Stability and Suitability for EWAS}
 The Pourbaix diagram for Ti in aqueous solution with glycine ligands is shown in Figure \ref{fig:Ti_Pourbaix_NH3_Gly_CN}. No stable \ce{Ti^2+}-\ce{NH3} or \ce{Ti^2+}-\ce{CN^-} complexes have been reported\cite{Griffith1962CyanideMetals, Nicholls1980ComplexTitanium}. The diagram includes the stability constants of \ce{[Ti(Gly)^-]} and \ce{[Ti(Gly)_2^+]}, but glycine concentration does not significantly impact Ti's passivity over the targeted potential and pH range. Due to its ability to form a stable passive oxide layer\cite{Kiss1991CriticalGlycine, PourbaixAtlasSolutions}, Ti is highly corrosion-resistant, with limited experimental evidence of dissolution\cite{Schmidt2009AqueousVoltammetry, Ziemniak1993SolubilityTemperatures, Knauss2001TiIV300C, Schmidt2006DissolutionEffect, Pocsi1988ComplexAcid}.
 
 While Ti oxides have low electronic conductivity, modifications such as MXenes\cite{Gardon2013ImprovedSpray, Naguib2012Two-DimensionalCarbides, Hui2022VacancyBatteries} and doped perovskites like \ce{SrTiO3}\cite{Sokolov2024ComputationalTitanate} offer enhanced conductivity. Thus, Ti-based materials, particularly modified oxides, are promising candidates for EWAS electrodes due to their corrosion resistance and potential for electronic conductivity enhancement.
 
-\subsection{Thermodynamic screening of alloys}
+\subsection{Thermodynamic screening of alloys} \label{sec:alloy_screening}
 % Identify conductive and stable dopants under relevant conditions, using Pourbaix diagrams and surface phase diagrams. 
 
 To identify materials that enhance both conductivity and electrochemical stability, we performed thermodynamic screening of alloy systems using a combination of bulk Pourbaix diagrams and surface phase diagrams. These diagrams allow us to assess not only the chemical stability of the alloy constituents under EWAS-relevant pH and potential ranges, but also their surface composition and phase behavior. In particular, we evaluated Ti-based alloys, such as Ti-Ni and Ti-Cu, as well as Pd-Au alloys, to understand how alloying modifies stability in the presence of nitrogen-containing ligands. These systems were chosen for their potential to balance redox durability with favorable conductivity and catalytic activity.
@@ -263,17 +282,17 @@ Evaluate the role of Mg in altering the electrochemical stability of Ti-based al
 % Present phase diagrams showing TiNi surface stability as a function of electrochemical potential and adsorbate coverage. Identify key transitions in surface composition or oxidation state and relate these to observed stability trends.
 
 
-\subsection{Stability and reactivity of Ti-based alloys surfaces}
-Detailed study of surface coverage/composition that leads to corrosion resistance. Connect surface phenomena with bulk Pourbaix predictions and evaluate how adsorbate-induced restructuring or dissolution may occur.
+% \subsection{Stability and reactivity of Ti-based alloys surfaces}
+% Detailed study of surface coverage/composition that leads to corrosion resistance. Connect surface phenomena with bulk Pourbaix predictions and evaluate how adsorbate-induced restructuring or dissolution may occur.
 
-\subsubsection{Comprehensive sampling of OER adsorbate coverage}
-Describe how different oxygenated species (*OH, *O, *OOH) bind to representative facets of TiNi, TiCu, and TiZn alloys. Highlight thermodynamic trends and identify conditions under which active or passivated surfaces form.
+% \subsubsection{Comprehensive sampling of OER adsorbate coverage}
+% Describe how different oxygenated species (*OH, *O, *OOH) bind to representative facets of TiNi, TiCu, and TiZn alloys. Highlight thermodynamic trends and identify conditions under which active or passivated surfaces form.
 
-\subsubsection{Sampling of TiNi top layer composition}
-Discuss results from Monte Carlo sampling of Ti/Ni ratios in the top atomic layer. Identify which configurations are most stable and under what conditions phase segregation or enrichment may occur.
+% \subsubsection{Sampling of TiNi top layer composition}
+% Discuss results from Monte Carlo sampling of Ti/Ni ratios in the top atomic layer. Identify which configurations are most stable and under what conditions phase segregation or enrichment may occur.
 
-\subsubsection{Ammonia covered TiNi surface}
-Analyze how ammonia binds to the TiNi surface and alters its stability. Discuss potential adsorbate-induced dissolution pathways, surface passivation effects, or ligand competition under EWAS-relevant conditions.
+% \subsubsection{Ammonia covered TiNi surface}
+% Analyze how ammonia binds to the TiNi surface and alters its stability. Discuss potential adsorbate-induced dissolution pathways, surface passivation effects, or ligand competition under EWAS-relevant conditions.
 
 
 
@@ -286,11 +305,8 @@ This study relies on thermodynamic predictions based on generalized gradient app
 
 
 
-\textcolor{red}{The sections below should be re-organized and added to the "pure metals" sub-section. I think 1-2 paragraphs of discussion for each metal is appropriate. There should also be 1-2 paragraphs of "intro" describing which metals we specifically discuss and which ones are relegated to the SI.}
+% \textcolor{red}{The sections below should be re-organized and added to the "pure metals" sub-section. I think 1-2 paragraphs of discussion for each metal is appropriate. There should also be 1-2 paragraphs of "intro" describing which metals we specifically discuss and which ones are relegated to the SI.}
 % Add metal-H2O to visualize how N-ligands affect corrosion.
-The constructed Pourbaix diagrams for Ni, Pd, Cu, Ti, and Pt are shown in Figures \ref{fig:Ni_Pourbaix}, \ref{fig:Cu_Pourbaix}, \ref{fig:Pd_Pourbaix}, and \ref{fig:Ti_Pt_Pourbaix}, respectively. The ion activity is set to \num{10e-4}M. The targeted operating potential is from -2 to 2V vs RHE, due to pulsing, and the pH ranges from 11.5 to 13.5. Stability domains of aqueous species, including metal ions and metal-ligand complexes, within this region indicate the likelihood of electrode corrosion under thermodynamic equilibrium. 
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ni %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -314,6 +330,8 @@ The constructed Pourbaix diagrams for Ni, Pd, Cu, Ti, and Pt are shown in Figure
     \caption{Ni Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$M, (a)\ce{H2O} only, (b)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M, (c)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. Green box indicates experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
     \label{fig:Ni_Pourbaix}
 \end{figure}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Cu %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
     \centering
@@ -334,6 +352,28 @@ The constructed Pourbaix diagrams for Ni, Pd, Cu, Ti, and Pt are shown in Figure
     \end{subfigure}
     \caption{Cu Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)\ce{H2O} only, (b)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M, (c)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. Green box indicates experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
     \label{fig:Cu_Pourbaix}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Au %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Au_Pourbaix_H2O}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
+        \par\medskip
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Au_Pourbaix_NH3_Gly}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \par\medskip
+    \end{subfigure}
+    \begin{subfigure}[b]{0.3\textwidth}
+        \subcaption{}\label{fig:Au_Pourbaix_NH3_Gly_CN}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \par\medskip   
+    \end{subfigure}
+    \caption{Au Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)\ce{H2O} only, (b)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M, (c)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. Green box indicates experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
+    \label{fig:Au_Pourbaix}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Pd %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{figure}[htbp]
