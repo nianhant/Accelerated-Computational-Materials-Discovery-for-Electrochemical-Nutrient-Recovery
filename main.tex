@@ -127,18 +127,21 @@ Therefore, to advance EWAS technologies, it is essential to develop a mechanisti
 
 % A major limitation of EWAS lies in the stability of the catalyst under nitrogen-rich, alkaline and dynamic electrochemical conditions. Elevated potentials accelerate electrode corrosion and dissolution\cite{Sanchis2022NitrateOverview,Popov2015ThermodynamicsCorrosion,Kapaka2010ElectrochemicalElectrode,Mucalo2004InSolutions,Aksu2001ElectrochemistrySolutions,OConnor2018ElectrochemicalSolutions}, while competition between nitrogen oxidation and OER further degrades catalytic performance~\cite{Li2021Ru-DopedNitrate,Wang2022ElectrochemicalOxidation,Dai2020ElectrochemicalOxides}. Reactive nitrogen species, such as ammonia (\ce{NH3}), glycine, and cyanide (\ce{HCN}), can form metal-ligand complexes that promote leaching and surface degradation~\cite{Bjerrum1957StabilitySubstances,Meng1996PrinciplesReview,Wang2022AmmoniaSystem}. While metal leaching in ammonia, cyanide, and glycine solutions has been extensively studied in hydrometallurgy~\cite{Meng1996PrinciplesReview,Wang2022AmmoniaSystem,Han1974AMMONIA-AMMONIUMNODULES,Bhuntumkomol1982TheSolutions,Azadi2021SustainableGlycine,Oraby2020GoldPermanganate,Sarvar2023ApplicationStructure,SPARROW1995CyanideApplications,Akcil2015PreciousReview}, these studies differ significantly from EWAS conditions, where ligand concentrations are lower and variable electrochemical driving forces influence material stability. Therefore, a systematic understanding of catalyst stability in nitrogen-rich environments under reducing and oxidative potentials in alkaline conditions is crucial for the development of efficient and sustainable electrodes.
 
+
 Pourbaix diagrams provide a valuable framework for predicting electrode stability by mapping dissolution, passivation, and oxidation regimes as a function of pH and applied potential~\cite{PourbaixAtlasSolutions}. Traditionally used in corrosion studies~\cite{McCafferty2010ThermodynamicsDiagrams, Stack2005BridgingDiagrams,Pourbaix1973LecturesCorrosion}, Pourbaix diagrams help identify stable operating conditions where catalyst dissolution is minimized. Most of the available diagrams account primarily for interactions with hydrogen ions\cite{Huang2017ImprovedCompounds,Wang2020PredictingFunctional,Huang2015ElectrochemicalCalculations,Cao2020E-pHLaterite}, so extending them to nitrogen-containing ligands is necessary to provide insight into material stability under EWAS conditions. In hydrometallurgy, Pourbaix diagrams have been adapted to study metal leaching in nitrogen-containing solutions~\cite{Meng1996PrinciplesReview,NasuhaYahya2019ThermodynamicDiagram,Barragan2021LeachingOptimization,OConnor2018ElectrochemicalSolutions,Seke2006EffectSphalerite}. However, the direct application of these diagrams to electrocatalyst stability remains limited, due to the high concentration of nitrogen ligands, and the high temperatures and pressures used for metal leaching. Integrating Pourbaix stability analysis with computational and experimental validation can accelerate the identification of durable catalysts for EWAS.
 
 % Minimizing electrode dissolution is critical to ensuring both the sustainability of electrochemical oxidation and the safety of recovered fertilizers. In this study, we apply Pourbaix diagrams to EWAS, focusing on stability under nitrogen-rich conditions. By systematically analyzing potential-pH stability regions, we establish a computational framework for catalyst screening—highlighting stability as a key design criterion alongside activity and selectivity. This approach provides a pathway for developing robust and sustainable catalysts for electrochemical nitrogen recovery.
 
 Minimizing electrode dissolution is critical to ensuring both the sustainability of electrochemical oxidation and the safety of recovered fertilizers. In this study, we apply Pourbaix diagram analysis to evaluate the electrochemical stability of candidate electrode materials under nitrogen-rich and alkaline conditions relevant to EWAS. We focus on a representative set of transition metals and metal oxides—including Au, Pt, Pd, Pt, Ni, Cu, Ti, and their binary combinations, to assess their susceptibility to corrosion and dissolution across a wide range of potentials and pH values. By identifying the thermodynamic stability domains of these materials, we establish a computational framework for materials screening that emphasizes stability as a core design criterion, complementing traditional metrics of activity and selectivity. This work provides mechanistic insights into electrode corrosion pathways and offers guidance for the development of robust electrodes for electrochemical nitrogen recovery.
 
+Add context for alloys.
 
 
 \section{Methods}
 \subsection{Pourbaix Diagram Construction}
 Pourbaix diagrams were constructed to map the thermodynamic stability regions of bulk metals/alloys and their metal-ligand complexes in the presence of nitrogen-containing ligands at concentrations in the range expected to be present in EWAS.
 %under electrolysis of waste activated sludge (EWAS) potentials in basic environment. 
+
 Free energies of bulk metals were obtained from the Materials Project database \cite{Jain2013TheInnovation}, based on generalized gradient approximation (GGA) density functional theory (DFT) calculations. Free energies for aqueous ligands and metal-ligand complexes were calculated from equilibrium constants sourced from standard thermochemical handbooks \cite{Wagman1982TheUnits, Smith1989CriticalConstants, Bard2017StandardSolution, Bjerrum1957StabilitySubstances} and literature \cite{Meng1996PrinciplesReview, Azadi2019DataComplexes, Aviles2022ExploringNH3, Oraby2023SelectiveSolutions, Harrington2005DeterminationIon}. We focus here on metal elements that are commonly used as electrode materials and those where metal-ligand complex stabilities are available: Au, Cu, Ni, Co, Mg, Mn, Ti, Zn, Ag, Cd, Sr, Pt, Pd and Fe. The aqueous ligands considered in this study include \ce{NH3-}, glycine and \ce{CN-}. The targeted experimental potential ranges from -2.0-2.3 V (vs RHE) and the pH ranges from 11.5-13.5, but Pourbaix diagrams are constructed over a wider range for reference.
 
 \begin{equation} \label{eq:reaction}
@@ -266,17 +269,36 @@ While Ti oxides have low electronic conductivity, modifications such as MXenes\c
 
 \subsection{Thermodynamic screening of alloys} \label{sec:alloy_screening}
 % Identify conductive and stable dopants under relevant conditions, using Pourbaix diagrams and surface phase diagrams. 
+% To identify materials that enhance both conductivity and electrochemical stability, we performed thermodynamic screening of alloy systems using a combination of bulk Pourbaix diagrams and surface phase diagrams. 
 
-To identify materials that enhance both conductivity and electrochemical stability, we performed thermodynamic screening of alloy systems using a combination of bulk Pourbaix diagrams and surface phase diagrams. These diagrams allow us to assess not only the chemical stability of the alloy constituents under EWAS-relevant pH and potential ranges, but also their surface composition and phase behavior. In particular, we evaluated Ti-based alloys, such as Ti-Ni and Ti-Cu, as well as Pd-Au alloys, to understand how alloying modifies stability in the presence of nitrogen-containing ligands. These systems were chosen for their potential to balance redox durability with favorable conductivity and catalytic activity.
+To identify materials that enhance both conductivity and electrochemical stability, we performed thermodynamic screening of alloy systems using bulk Pourbaix diagrams. These diagrams allow us to assess the thermodynamic stability of the alloy constituents under EWAS-relevant pH and potential ranges. In particular, we evaluated Ti-based alloys, such as Ti-Ni and Ti-Cu, as well as Pd-Au alloys, to understand how alloying modifies stability in the presence of nitrogen-containing ligands. These systems were chosen for their potential to balance redox durability with favorable conductivity and catalytic activity.
 
 \subsubsection{TiNi Alloy Stability}
-Discuss the thermodynamic stability of TiNi alloy under EWAS-relevant pH and potential ranges. Use Pourbaix diagrams to identify dominant dissolution products or passivation layers, and compare with pure Ti behavior to assess alloying effects.
+Using an equiatomic composition constraint between titanium and nickel, the Pourbaix diagram reveals that a single stable oxide phase, \ce{TiNiO3}, dominates under EWAS-relevant pH and potential conditions in the presence of \ce{NH3} and glycine ligands. Compared to the Ni-only Pourbaix diagram (Figure \ref{fig:Ni_Pourbaix_NH3_Gly}), the stability region of the \ce{Ni(Gly)_3^{-}} complex is reduced, with \ce{TiNiO3} occupying a broader region in the experimental pH range. This oxide phase also exhibits greater stability than the solvated \ce{Ni(OH)_3^-} species, remaining thermodynamically favored up to pH 14, thereby extending the passivation window compared to pure nickel. At lower pH values, the Ni–glycine complexes become more stable than the mixed-metal oxide, indicating that the stability of the oxide is pH-dependent and can be suppressed under more acidic conditions.
 
-\subsubsection{TiCu Alloy Stability}
-Summarize the corrosion behavior and complexation tendencies of TiCu alloys in nitrogen ligand environments. Highlight whether Cu content compromises or enhances stability compared to TiNi, and support with relevant Pourbaix diagrams.
+Consistent with the report by Ding et al.\ \cite{Ding2018ElectrochemicalStates}, the thermodynamically stable oxide formed on in aqueous solutions is primarily composed of \ce{TiNiO3}. However, experimental studies \cite{Huang2005SurfaceAcidity, Clarke2006InfluenceRelease, Carroll2003CorrosionEnvironments} have identified \ce{TiO2} and NiO as the main components of the oxide layer. According to Ding et al., \ce{TiO2} and NiO can further react to form the more stable ternary oxide \ce{TiNiO3}. Additional experimental investigations and surface phase diagram analyses are needed to validate the applicability of \ce{TiNiO3} as a candidate for EWAS electrodes and to better understand its role in corrosion resistance mechanisms.
 
-\subsubsection{TiMg Alloy Stability}
-Evaluate the role of Mg in altering the electrochemical stability of Ti-based alloys. Discuss whether Mg incorporation broadens the stable region or introduces instability under alkaline, oxidative EWAS conditions.
+
+% are three stable intermetallic phases Ti2Ni, NiTi, and Ni3Ti. 
+% Discuss the thermodynamic stability of TiNi alloy under EWAS-relevant pH and potential ranges. Use Pourbaix diagrams to identify dominant dissolution products or passivation layers, and compare with pure Ti behavior to assess alloying effects.
+
+% \subsubsection{TiCu Alloy Stability}
+% Summarize the corrosion behavior and complexation tendencies of TiCu alloys in nitrogen ligand environments. Highlight whether Cu content compromises or enhances stability compared to TiNi, and support with relevant Pourbaix diagrams.
+
+
+
+\subsubsection{PdAu Alloy Stability}
+% As shown in Figure \ref{fig:PdAu_Pourbaix_NH3_Gly}, two alloys, \ce{PdAu3} and \ce{Pd3Au}, are stable over the experimental pH and potential ranges, while the \ce{Au{NH3}_2} complex coexist with PdO in this pH range when applied potential is from 0.5 to 0.8V vs RHE. The stability region of the PdAu alloy does not affect that of the Au-glycine complex, since the stability regions of these two species do not overlap. The passivation region region of Au and Pd remain unaffected since the stability region of the alloy is lower than Au's equilibrium potentials. Sine the Pourbaix diagram only indicates thermodynamic stability and have no indication of the kinetics, it will be interesting to study if the PdAu alloy will result in higher activity of glycine oxidation than on pure Pd electrode, while exhibit better stability than pure Au electrode. 
+
+As shown in Figure~\ref{fig:PdAu_Pourbaix_NH3_Gly}, two Pd-Au alloys, \ce{PdAu3} and \ce{Pd3Au}, are predicted to be thermodynamically stable within the experimentally relevant pH and potential window. In this region, the \ce{[Au(NH3)_2]^+} complex is also stable and can coexist with PdO between 0.5 and 0.8~V vs. RHE. However, the formation of stable PdAu alloys does not alter the stability domains of Au-ammonia or Au-glycine complexes, as their respective stability regions do not overlap with the alloy phase. The passivation regions of both Au and Pd also remain unaffected, as the alloy's stability domain lies below the equilibrium dissolution potentials of the individual metals.
+
+In electrocatalysis, alloying Au with Pd has been shown to enhance Pd’s activity and durability, particularly for methanol oxidation, by modulating Pd’s structural and electronic properties \cite{Hoshi2006StructuralPalladium, Kelly2018UnderstandingReaction, Aota2023RevealingTomography}. While Pd exhibits good thermodynamic stability, it often suffers from low catalytic activity toward oxidation reactions. In contrast, Au offers high activity but is prone to corrosion in nitrogen-rich media.
+
+Since Pourbaix diagrams capture only thermodynamic stability and not catalytic kinetics, it remains an open question whether PdAu alloys could offer improved glycine oxidation activity relative to pure Pd, while mitigating the corrosion issues associated with pure Au. Further experimental investigation of PdAu alloys under dynamic EWAS-relevant conditions would help clarify whether this system offers a desirable balance of stability and catalytic performance.
+
+
+
+% Evaluate the role of Mg in altering the electrochemical stability of Ti-based alloys. Discuss whether Mg incorporation broadens the stable region or introduces instability under alkaline, oxidative EWAS conditions.
 
 % \subsubsection{TiNi Surface Phase Diagrams}
 % Present phase diagrams showing TiNi surface stability as a function of electrochemical potential and adsorbate coverage. Identify key transitions in surface composition or oxidation state and relate these to observed stability trends.
@@ -299,9 +321,12 @@ Evaluate the role of Mg in altering the electrochemical stability of Ti-based al
 % \subsection{Detailed study of most promising materials}
 % Select a few materials and use DFT to validate descriptor vectors. Perform more in-depth study of stability and reactivity with results.
 \subsection{Limitations}
-GGA/DFT energies, thermodynamic limit only, ...
+% GGA/DFT energies, thermodynamic limit only, ...
 
-This study relies on thermodynamic predictions based on generalized gradient approximation (GGA) density functional theory (DFT), which may introduce systematic errors in computed formation energies and reaction potentials. The Pourbaix diagrams represent equilibrium behavior and do not capture kinetic effects, such as activation barriers for dissolution or passivation layer formation. Additionally, the large-scale sampling of surface coverages and alloy configurations was performed using machine learning interatomic potentials (e.g., MACE), which may deviate from DFT accuracy for certain adsorbates or alloy environments. Experimental validation and higher-level electronic structure methods would be valuable to confirm specific stability trends and refine quantitative predictions.
+This study relies on thermodynamic predictions derived from generalized gradient approximation (GGA) density functional theory (DFT), which is known to introduce systematic errors in computed formation energies and electrochemical potentials, typically on the order of $\pm 0.2$ eV. Additionally, some of the alloy stoichiometries used in the analysis are obtained from the Materials Project database and may be theoretical compounds that have not yet been synthesized or observed experimentally. The free energies of metal-ligand complexes are calculated using experimental stability or formation constants, which themselves are subject to experimental uncertainty and may involve simplifying assumptions. Furthermore, the Pourbaix diagrams presented here reflect only equilibrium thermodynamics and do not account for kinetic effects, such as activation barriers for corrosion, dissolution, or passivation layer formation. As such, experimental validation and the use of higher-level electronic structure methods would be valuable to confirm key stability trends and improve the accuracy of quantitative predictions.
+
+
+% Additionally, the large-scale sampling of surface coverages and alloy configurations was performed using machine learning interatomic potentials (e.g., MACE), which may deviate from DFT accuracy for certain adsorbates or alloy environments. 
 
 
 
@@ -406,8 +431,8 @@ This study relies on thermodynamic predictions based on generalized gradient app
         \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
         \par\medskip   
     \end{subfigure}
-    \caption{TiNi alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Ti:Ni = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5.}
-    \label{fig:TiNi_alloy_Pourbaix}
+    \caption{Pourbaix diagrams of (a) Ti, (b) Pt. $\text{Ion activity}=\num{1e-4}$, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. Green box indicates experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
+    \label{fig:Ti_Pt_Pourbaix}
 \end{figure}
 
 
@@ -416,23 +441,69 @@ This study relies on thermodynamic predictions based on generalized gradient app
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:TiNi_Pourbaix_NH3_Gly}
-        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        \includegraphics[width=\textwidth]
+        {Figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
         \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:TiNi_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]
-        {Figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
         \par\medskip   
     \end{subfigure}
-    \caption{Pourbaix diagrams of (a) Ti, (b) Pt. $\text{Ion activity}=\num{1e-4}$, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. Green box indicates experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
-    \label{fig:Ti_Pt_Pourbaix}
+    \caption{TiNi alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Ti:Ni = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
+    \label{fig:TiNi_alloy_Pourbaix}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% TiCu Alloy %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \subcaption{}\label{fig:TiCu_Pourbaix_NH3_Gly}
+        \includegraphics[width=\textwidth]
+        {Figures/alloy_pourbaix_diagrams/Ti_Cu_alloy_Ti0.5 Cu0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        \par\medskip
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \subcaption{}\label{fig:TiCu_Pourbaix_NH3_Gly_CN}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Ti_Cu_alloy_Ti0.5 Cu0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
+        \par\medskip   
+    \end{subfigure}
+    \caption{TiCu alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Ti:Cu = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
+    \label{fig:TiCu_alloy_Pourbaix}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PdAu Alloy %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[htbp]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \subcaption{}\label{fig:PdAu_Pourbaix_NH3_Gly}
+        \includegraphics[width=\textwidth]
+        {Figures/alloy_pourbaix_diagrams/Pd_Au_alloy_Pd0.5 Au0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        \par\medskip
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \subcaption{}\label{fig:PdAu_Pourbaix_NH3_Gly_CN}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Pd_Au_alloy_Pd0.5 Au0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
+        \par\medskip   
+    \end{subfigure}
+    \caption{PdAu alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Pd:Au = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
+    \label{fig:PdAu_alloy_Pourbaix}
 \end{figure}
 
 
 
 \section{Conclusion}
-This study evaluates the stability of Ni, Cu, Pd, Pt, and Ti electrodes under EWAS conditions using Pourbaix diagrams, revealing the significant influence of nitrogen-containing ligands on metal corrosion behavior. While Ni and Cu exhibit strong resistance in aqueous environments, they become highly susceptible to dissolution in the presence of \ce{CN^-} ligands, necessitating careful solution composition control to prevent electrode degradation and contamination. Pd and Pt remain largely unaffected by glycine and ammonia but are vulnerable to cyanide complexation, with uncertainties in reported stability constants further complicating their viability. Given their high cost and instability in cyanide-rich environments, Pd and Pt are not ideal for EWAS applications. In contrast, Ti maintains excellent corrosion resistance due to its passivating oxide layer, making it the most promising candidate despite its low electronic conductivity, which can be addressed through conductive Ti-based materials. These findings highlight the importance of integrating stability considerations into electrode design, ensuring durability and minimizing contamination risks in electrochemical nutrient recovery systems.
+% This study evaluates the stability of Ni, Cu, Pd, Pt, and Ti electrodes under EWAS conditions using Pourbaix diagrams, revealing the significant influence of nitrogen-containing ligands on metal corrosion behavior. While Ni and Cu exhibit strong resistance in aqueous environments, they become highly susceptible to dissolution in the presence of \ce{CN^-} ligands, necessitating careful solution composition control to prevent electrode degradation and contamination. Pd and Pt remain largely unaffected by glycine and ammonia but are vulnerable to cyanide complexation, with uncertainties in reported stability constants further complicating their viability. Given their high cost and instability in cyanide-rich environments, Pd and Pt are not ideal for EWAS applications. In contrast, Ti maintains excellent corrosion resistance due to its passivating oxide layer, making it the most promising candidate despite its low electronic conductivity, which can be addressed through conductive Ti-based materials. These findings highlight the importance of integrating stability considerations into electrode design, ensuring durability and minimizing contamination risks in electrochemical nutrient recovery systems.
+
+This study evaluates the stability of Ni, Cu, Pd, Pt, and Ti electrodes EWASconditions using Pourbaix diagrams, highlighting the critical role of nitrogen-containing ligands in governing corrosion behavior. While Ni and Cu exhibit strong resistance to oxidation in pure aqueous environments, they are highly susceptible to dissolution in the presence of \ce{CN^-} ligands, underscoring the importance of controlling solution composition to mitigate electrode degradation and metal leaching. Pd and Pt are relatively inert toward glycine and ammonia but form stable cyanide complexes even at low concentrations, with inconsistencies in reported stability constants introducing uncertainty in their predicted durability. Given these limitations, alongside their high cost, Pd and Pt are less favorable candidates for EWAS deployment.
+
+In contrast, Ti demonstrates excellent corrosion resistance across the EWAS-relevant pH and potential range due to its robust passivating oxide layer. However, its poor electronic conductivity may limit catalytic performance unless incorporated into conductive architectures such as doped perovskites, MXenes, or metal alloys.
+
+To address this, we explored the stability of Ti-based and Pd-based alloys using Pourbaix diagrams. Alloys such as TiNi and TiCu combine the corrosion resistance of Ti with the catalytic activity or conductivity of the dopant metal, offering a pathway toward functionally optimized electrode materials. Additionally, PdAu alloys are investigated for their potential to improve the balance between catalytic activity and stability under redox-dynamic EWAS conditions. These alloying strategies demonstrate that tailored compositions can mitigate the trade-offs between stability, activity, and conductivity, making them promising candidates for durable and efficient nutrient recovery systems.
+
+Overall, this work emphasizes the importance of integrating thermodynamic screening of both pure and alloyed materials to guide the rational design of EWAS electrodes with enhanced corrosion resistance, minimal leaching, and sustained performance in nitrogen-rich, alkaline environments.
+
+
 
 
 \section{CRediT authorship contribution statement}
@@ -448,166 +519,6 @@ Andrew J. Medford: Conceptualization, Supervision, Project administration, Writi
 
 
 
-% \subsection{References}
-
-% The class makes various changes to the way that references are
-% handled.  The class loads \textsf{natbib}, and also the
-% appropriate bibliography style.  References can be made using
-% the normal method; the citation should be placed before any
-% punctuation, as the class will move it if using a superscript
-% citation style
-% \cite{Mena2000,Abernethy2003,Friedman-Hill2003,EuropeanCommission2008}.
-% The use of \textsf{natbib} allows the use of the various citation
-% commands of that package: \citeauthor{Abernethy2003} have shown
-% something, in \citeyear{Cotton1999}, or as given by
-% Ref.~\citenum{Mena2000}.  Long lists of authors will be
-% automatically truncated in most article formats, but not in
-% supplementary information or reviews \cite{Pople2003}. If you
-% encounter problems with the citation macros, please check that
-% your copy of \textsf{natbib} is up to date. The demonstration
-% database file \texttt{achemso-demo.bib} shows how to complete
-% entries correctly. Notice that ``\latin{et al.}'' is auto-formatted
-% using the \texttt{\textbackslash latin} command.
-
-% Multiple citations to be combined into a list can be given as
-% a single citation.  This uses the \textsf{mciteplus} package
-% \cite{Johnson1972,*Arduengo1992,*Eisenstein2005,*Arduengo1994}.
-% Citations other than the first of the list should be indicated
-% with a star. If the \textsf{mciteplus} package is not installed,
-% the standard bibliography tools will still work but starred
-% references will be ignored. Individual references can be referred
-% to using \texttt{\textbackslash mciteSubRef}:
-% ``ref.~\mciteSubRef{Eisenstein2005}''.
-
-% The class also handles notes to be added to the bibliography.  These
-% should be given in place in the document \bibnote{This is a note.
-% The text will be moved the the references section.  The title of the
-% section will change to ``Notes and References''.}.  As with
-% citations, the text should be placed before punctuation.  A note is
-% also generated if a citation has an optional note.  This assumes that
-% the whole work has already been cited: odd numbering will result if
-% this is not the case \cite[p.~1]{Cotton1999}.
-
-% \subsection{Floats}
-
-% New float types are automatically set up by the class file.  The
-% means graphics are included as follows (Scheme~\ref{sch:example}).  As
-% illustrated, the float is ``here'' if possible.
-% \begin{scheme}
-%   Your scheme graphic would go here: \texttt{.eps} format\\
-%   for \LaTeX\, or \texttt{.pdf} (or \texttt{.png}) for pdf\LaTeX\\
-%   \textsc{ChemDraw} files are best saved as \texttt{.eps} files:\\
-%   these can be scaled without loss of quality, and can be\\
-%   converted to \texttt{.pdf} files easily using \texttt{eps2pdf}.\\
-%   %\includegraphics{graphic}
-%   \caption{An example scheme}
-%   \label{sch:example}
-% \end{scheme}
-
-% \begin{figure}
-%   As well as the standard float types \texttt{table}\\
-%   and \texttt{figure}, the class also recognises\\
-%   \texttt{scheme}, \texttt{chart} and \texttt{graph}.
-%   \caption{An example figure}
-%   \label{fgr:example}
-% \end{figure}
-
-% Charts, figures and schemes do not necessarily have to be labelled or
-% captioned.  However, tables should always have a title. It is
-% possible to include a number and label for a graphic without any
-% title, using an empty argument to the \texttt{\textbackslash caption}
-% macro.
-
-% The use of the different floating environments is not required, but
-% it is intended to make document preparation easier for authors. In
-% general, you should place your graphics where they make logical
-% sense; the production process will move them if needed.
-
-% \subsection{Math(s)}
-
-% The \textsf{achemso} class does not load any particular additional
-% support for mathematics.  If packages such as \textsf{amsmath} are
-% required, they should be loaded in the preamble.  However,
-% the basic \LaTeX\ math(s) input should work correctly without
-% this.  Some inline material \( y = mx + c \) or $ 1 + 1 = 2 $
-% followed by some display. \[ A = \pi r^2 \]
-
-% It is possible to label equations in the usual way (Eq.~\ref{eqn:example}).
-% \begin{equation}
-%   \frac{\mathrm{d}}{\mathrm{d}x} \, r^2 = 2r \label{eqn:example}
-% \end{equation}
-% This can also be used to have equations containing graphical
-% content. To align the equation number with the middle of the graphic,
-% rather than the bottom, a minipage may be used.
-% \begin{equation}
-%   \begin{minipage}[c]{0.80\linewidth}
-%     \centering
-%     As illustrated here, the width of \\
-%     the minipage needs to allow some  \\
-%     space for the number to fit in to.
-%     %\includegraphics{graphic}
-%   \end{minipage}
-%   \label{eqn:graphic}
-% \end{equation}
-
-% \section{Experimental}
-
-% The usual experimental details should appear here.  This could
-% include a table, which can be referenced as Table~\ref{tbl:example}.
-% Notice that the caption is positioned at the top of the table.
-% \begin{table}
-%   \caption{An example table}
-%   \label{tbl:example}
-%   \begin{tabular}{ll}
-%     \hline
-%     Header one  & Header two  \\
-%     \hline
-%     Entry one   & Entry two   \\
-%     Entry three & Entry four  \\
-%     Entry five  & Entry five  \\
-%     Entry seven & Entry eight \\
-%     \hline
-%   \end{tabular}
-% \end{table}
-
-% Adding notes to tables can be complicated.  Perhaps the easiest
-% method is to generate these using the basic
-% \texttt{\textbackslash textsuperscript} and
-% \texttt{\textbackslash emph} macros, as illustrated (Table~\ref{tbl:notes}).
-% \begin{table}
-%   \caption{A table with notes}
-%   \label{tbl:notes}
-%   \begin{tabular}{ll}
-%     \hline
-%     Header one                            & Header two \\
-%     \hline
-%     Entry one\textsuperscript{\emph{a}}   & Entry two  \\
-%     Entry three\textsuperscript{\emph{b}} & Entry four \\
-%     \hline
-%   \end{tabular}
-
-%   \textsuperscript{\emph{a}} Some text;
-%   \textsuperscript{\emph{b}} Some more text.
-% \end{table}
-
-% The example file also loads the optional \textsf{mhchem} package, so
-% that formulas are easy to input: \texttt{\textbackslash ce\{H2SO4\}}
-% gives \ce{H2SO4}.  See the use in the bibliography file (when using
-% titles in the references section).
-
-% The use of new commands should be limited to simple things which will
-% not interfere with the production process.  For example,
-% \texttt{\textbackslash mycommand} has been defined in this example,
-% to give italic, mono-spaced text: \mycommand{some text}.
-
-% In addition there are very limited amount of aqueous Ti ions in the solution. There are very limited studies on the dissolution of Ti in aqueous condition at ambient temperature \cite{Schmidt2009AqueousVoltammetry, Ziemniak1993SolubilityTemperatures,Knauss2001TiIV300C,Schmidt2006DissolutionEffect}, due to its small equilibrium solubility, due to uncertainties of wether Ti ions existed in aqueous solutions. Caglioti et al. \cite{Caglioti1960ComplexitySolutions} investigated dissolved Ti species in aqueous phase and found that \ce{TiO^2+} is the only aqueous species present even at highly acidic condition at pH=0.40. The strong acidity of \ce{Ti^4+} and \ce{Ti^3+} exceeds that of HCN, which hinders the formation of titanium cyanide complexes in aqueous solutions \cite{Nicholls1980ComplexTitanium, Griffith1962CyanideMetals}, therefore no stability constants of titanium cyanide complexes can be found in literature.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% The "Acknowledgement" section can be given in all manuscript
-%% classes.  This should be given within the "acknowledgement"
-%% environment, which will make the correct section or running title.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{acknowledgement}
 
 % Please use ``The authors thank \ldots'' rather than ``The
@@ -636,26 +547,6 @@ Free energies of metal-ligand complexes are available.
 %% Notice that the class file automatically sets \bibliographystyle
 %% and also names the section correctly.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\bibliography{references_mendeley_pourbaix}
+\bibliography{references_mendeley_pourbaix, references}
 
 \end{document}
-
-% Importance of Stability in Materials Discovery
-% In particular, operating under nitrogen-rich conditions at oxidative potentials can accelerate the corrosion and dissolution of electrode materials, posing a significant challenge to long-term sustainability~\cite{insert_citation}. Competition between nutrient electrolysis and side reactions, such as the oxygen evolution reaction (OER), further compromises catalyst selectivity and induces surface oxidation or passivation, leading to activity loss over time~\cite{insert_citation}. Additionally, the presence of reactive nitrogen species, such as ammonia (\ce{NH3}), glycine, and cyanide (\ce{HCN}), can lead to complex metal-ligand interactions that promote leaching and destabilization of the catalyst surface~\cite{insert_citation}. While extensive studies have investigated metal leaching in ammonia, cyanide, and glycine solutions for hydrometallurgical applications~\cite{Meng1996PrinciplesReview,Wang2022AmmoniaSystem,Han1974AMMONIA-AMMONIUMNODULES,Bhuntumkomol1982TheSolutions,Azadi2021SustainableGlycine,Oraby2020GoldPermanganate,Sarvar2023ApplicationStructure,SPARROW1995CyanideApplications,Akcil2015PreciousReview}, few studies have explored the degradation mechanisms of electrode materials under EWAS conditions, where nitrogen-containing ligands coexist with applied electrochemical potentials and competing redox reactions. Given the distinct differences in operating conditions—such as lower ligand concentrations, neutral to alkaline pH, and the presence of electrochemical driving forces—direct extrapolation from hydrometallurgical studies is not feasible. Therefore, a systematic understanding of catalyst stability under these electrochemical conditions is essential to develop robust materials that can withstand prolonged operation.
-
-% The thermodynamic stability of electrode materials in electrochemical systems is traditionally analyzed using Pourbaix diagrams~\cite{PourbaixAtlasSolutions}, which map the phase stability of solid bulk species and solvated aqueous ions as a function of applied potential and pH. These diagrams serve as a powerful tool for predicting material dissolution, passivation, or stability under electrochemical operating conditions~\cite{insert_citation}. In corrosion studies, Pourbaix diagrams are widely used to identify optimal applied potentials and pH regimes where materials remain stable without significant dissolution, ensuring the longevity of electrodes in electrochemical devices~\cite{insert_citation}. Additionally, they reveal passivating regions where bulk metals can form protective oxide layers that prevent further degradation from oxidative attack. However, most available Pourbaix diagrams primarily account for interactions with hydrogen ions and neglect the impact of nitrogen-containing ligands, limiting their applicability in high-nitrogen environments relevant to electrochemical nutrient recovery~\cite{insert_citation}.
-
-% In hydrometallurgy, Pourbaix diagrams have been extended to study metal leaching in the presence of nitrogen-containing ligands, such as ammonia, glycine, and cyanide~\cite{Meng1996PrinciplesReview}. These studies provide valuable insights into metal-ligand complexation and dissolution mechanisms; however, they are typically conducted under high-temperature and high-concentration leaching conditions, which differ significantly from the mild electrochemical conditions of EWAS. Nonetheless, leveraging Pourbaix diagrams that incorporate nitrogen-containing ligands can help predict electrode stability in nutrient recovery systems, guiding catalyst design by identifying compositions that balance stability, activity, and selectivity~\cite{insert_citation}.
-
-
-% Electrode dissolution must be minimized to ensure that electrochemical oxidation remains a sustainable approach for nitrogen recovery and that the resulting fertilizers are free from toxic metal contaminants. In this study, we apply Pourbaix diagrams to electrochemical waste sludge oxidation, focusing on the potential and pH ranges pertinent to nutrient recovery. By generating and analyzing stability maps under these conditions, we aim to establish a computational framework for screening materials based on stability—a crucial yet often overlooked criterion in electrocatalysis.
-
-% A systematic understanding of catalyst stability under these electrochemical conditions is essential for developing robust materials that can withstand prolonged operation. Pourbaix diagrams provide valuable thermodynamic insights into potential dissolution pathways, passivation regimes, and the formation of stable oxides or hydroxides under various pH and applied voltage conditions~\cite{insert_citation}. By integrating computational modeling with experimental validation, researchers can identify catalyst compositions that optimize both activity and resilience in nitrogen-rich electrochemical environments~\cite{insert_citation}. Addressing these stability issues will enable the design of next-generation electrocatalysts with enhanced durability, ensuring that electrochemical nutrient recovery becomes a viable and scalable alternative to conventional nitrogen production methods.
-% 1.3 Inspiration from Hydrometallurgy
-% Role of nitrogen-containing ligands in hydrometallurgical processes.
-% Difference in nitrogen concentration conditions between hydrometallurgy and electrochemical recovery.
-
-% The thermodynamic stability of materials under electrochemical conditions can be described by Pourbaix diagrams \cite{PourbaixAtlasSolutions}. Pourbaix diagrams demonstrate the relative stable regions of solid bulk species and solvated aqueous ions as a function of applied potential and pH. These diagrams help identify the effect of electrochemical experimental parameters on material's phase stability [insert citation]. In corrosion studies, Pourbaix diagrams are used to identify optimal applied potentials and pH such that electrodes are stable and will not dissolve. These diagrams also help find passitating regions where bulk metals can form a metal oxide layer that prevents further surface attack by oxygen in the solution, or induced by oxidizing potentials. Most available Pourbaix diagram studies of electrochemical system only account for the affect of the ionic activity of hydrogen, so the stability of bulk materials under these conditions cannot be directly used to identify stable regions of electrode under high nitrogen containing ligand concentrations. In hydrometallurgy studies, Pourbaix diamgrams are used to identify optimal conditions for metal leaching to recover rare or toxic metals from ores. Recent work has extended these diagrams to metal leaching induced by nitrogen-containing ligands such as ammonia\cite{Meng1996PrinciplesReview}, glycine and cyanide. Although these studies are typically conducted under conditions of high temperature and high leaching solution concentration, which differ significantly from those relevant to electrochemical nutrient recovery, Pourbaix diagrams that cover the effect of N-containing ligands can be used to identify electrode stability and accelerate catalyst design by focusing on stable compositions. 
-
-
-% Through this work, we present a material screening strategy that integrates stability, activity, and selectivity to identify materials capable of efficient and selective nitrogen recovery from organic waste. By leveraging computational insights and thermodynamic stability analysis, this study provides a pathway toward designing robust and sustainable catalysts for electrochemical nutrient recovery.
