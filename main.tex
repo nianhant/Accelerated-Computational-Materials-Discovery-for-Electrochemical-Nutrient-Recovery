@@ -6,6 +6,8 @@
 \usepackage{siunitx}
 \usepackage{xr}
 \usepackage{hyperref} 
+\usepackage{cleveref}
+
 \externaldocument[prefix]{output}
 
 \captionsetup[subfigure]{skip=1pt,singlelinecheck=false}
@@ -20,7 +22,7 @@
 
 \author{Haldrian Iriawan}
 \affiliation[Massachusetts Institute of Technology]
-{Department of Materials Science & Engineering, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139 USA}
+{Department of Materials Science \& Engineering, Massachusetts Institute of Technology, Cambridge, Massachusetts 02139 USA}
 
 \author{Paul Kohl}
 \affiliation[Georgia Institute of Technology]
@@ -75,7 +77,6 @@ Existing computational Pourbaix diagrams typically address pure metals \cite{Pou
 
 Experimental Pourbaix construction relies on measured chemical potentials \cite{PourbaixAtlasSolutions, Pourbaix1973LecturesCorrosion, Beverskog1999PourbaixIron-Chromium-Nickel}, but accurate data can be difficult to obtain due to sample complexity and characterization challenges \cite{Huang2017ImprovedCompounds}. First-principles methods now enable diagram construction from DFT-calculated Gibbs free energies of solids combined with experimental ion data \cite{Wang2020PredictingFunctional, Lopez2023ComputationalStudies, Liu2024ReversiblePH, Ding2018ElectrochemicalStates, Huang2015ElectrochemicalCalculations, Persson2012PredictionStates, Patel2019EfficientCompounds, Oses2018AFLOW-CHULL:Analysis}. Large materials databases such as the Materials Project \cite{Ong2013PythonAnalysis, Singh2017ElectrochemicalMaterials, Jain2011FormationCalculations, Montoya2015TheoreticalSplitting, Singh2019RobustDiscovery} now make high-throughput stability screening feasible. While DFT functionals may carry functional-dependent errors, such as the overbinding of O$_2$ in PBE, SCAN with Hubbard $U$ corrections has improved agreement with experimental oxide thermodynamics \cite{Wang2020PredictingFunctional}.
 
-% While these methods bring advancement in combining computational and experimental stability data, they still carry functional-dependent errors, such as the overbinding of O$_2$ in PBE, that may affect the accuracy of calculated formation energies and equilibrium lines on the diagram \cite{Wang2020PredictingFunctional}. Improved methods using the SCAN functional with Hubbard $U$ corrections have demonstrated better agreement with experimental data, particularly for transition metal oxides \cite{Wang2020PredictingFunctional}. Prior work has also shown combining DFT-derived solid-phase energies with experimental ion data to model pure metals \cite{Huang2017ImprovedCompounds, Liu2024ReversiblePH, Sun2024AssessingStudy} and binary alloys \cite{Ding2018ElectrochemicalStates, Dong2021ElectrochemicalData, Malki2023DerivingCalculations, Taylor2021InvestigationsTheory} and assess their corrosion behavior.
 
 To address the underexplored interplay of nitrogen ligands, pulsing applied potentials, and alloying effects, we extend the Pourbaix diagram methodology to evaluate the thermodynamic stability of transition metals and their alloys in nitrogen-rich environments. We focus on a representative set of pure metals, Ni, Cu, Pd, Pt, Au, Ti, and selected binary alloys, revealing that Ti–Ni and Pd–Au may offer a promising tradeoff between stability and reactivity. We incorporate metal-ligand complexation with \ce{NH3}, glycine, and \ce{CN^-}, and examine wide potential and pH ranges to approximate electrochemical conditions. Together, these analyses establish thermodynamic stability as a key material screening criterion, providing a computational framework to guide the rational design of durable electrode materials for sustainable electrochemical nitrogen recovery.
 
@@ -154,7 +155,7 @@ We performed thermodynamic screening of a range of pure metals to evaluate their
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/metal_pourbaix_collage_1.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/pourbaix_diagrams/metal_pourbaix_collage_1.pdf}}
 \caption{Metal Pourbaix diagrams: (a) Ni, (b) Cu, (c) Au, (d) Pd, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:metal_pourbaix_collage_1}
 \end{figure}
@@ -162,7 +163,7 @@ We performed thermodynamic screening of a range of pure metals to evaluate their
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/metal_pourbaix_collage_2.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/pourbaix_diagrams/metal_pourbaix_collage_2.pdf}}
 \caption{Metal Pourbaix diagrams: (a) Pt, (b) Ti, (c) Co, (d) Mg, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:metal_pourbaix_collage_2}
 \end{figure}
@@ -170,7 +171,7 @@ We performed thermodynamic screening of a range of pure metals to evaluate their
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/metal_pourbaix_collage_3.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/pourbaix_diagrams/metal_pourbaix_collage_3.pdf}}
 \caption{Metal Pourbaix diagrams: (a) Mn, (b) Zn, (c) Ag, (d) Fe, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:metal_pourbaix_collage_3}
 \end{figure}
@@ -180,7 +181,7 @@ A general trend can be observed: those metals that tend to form stable aqueous i
 
 Metals like Ni, Cu, Au, Zn, and Ag display stable oxide phases under some experimentally relevant conditions. However, their glycine complexes are also thermodynamically stable in other relevant regions, often sharing a phase boundary with the oxide phase. Although the exact mechanism of dissolution of metallic phases in ligand-rich environments is not fully understood, it is proposed that metal dissolution proceeds through intermediate oxide formation, with dissolved oxygen acting as an oxidant \cite{Liao2012EffectsCopper, Ihnfeldt2008EffectNanohardness}. These metal oxides then react with ligands to form stable aqueous complexes \cite{Broeksma2023EvaluatingBoards, Du2004EffectIons, Ihnfeldt2008EffectNanohardness}. At lower pH, the dissolution of metals by ammonia and glycine decreases, consistent with the reduced thermodynamic stability of neutral ammonia and anionic glycine under less alkaline conditions \cite{Broeksma2023EvaluatingBoards}. Co, Mg, Mn, and Fe also form stable oxide phases in the EWAS-relevant region, while their hydroxide or glycine complexes become increasingly stable under alkaline and oxidative conditions.
 
-Among the candidates, Ti-based materials were identified as the most stable across the full range of electrochemical potentials and pH values considered. This stability is primarily due to the spontaneous formation of a passive, thermodynamically stable \ce{TiO2} layer, which protects the underlying Ti metal from further oxidation \cite{Kuromoto2007TitaniumVoltages}. However, \ce{TiO2} is a wide band-gap semiconductor (3.2 eV for anatase and 3.0 eV for rutile) \cite{Earle1942TheDioxide, Bendavid1999StructuralDeposition}, and suffers from low conductivity \cite{Wu2014High-performanceApproach}. To address this limitation, structural modifications, such as alloying with conductive metals or doping with nonmetallic impurities, have been explored to enhance charge transport by increasing the concentration of charge carriers \cite{Chen_2007, Zheng2011FacilePhenol, Hahn2009SemimetallicNanotubes}.
+Among the candidates, Ti-based materials were identified as the most stable across the full range of electrochemical potentials and pH values considered. This stability is primarily due to the spontaneous formation of a passive, thermodynamically stable \ce{TiO2} layer, which protects the underlying Ti metal from further oxidation \cite{Kuromoto2007TitaniumVoltages}. However, \ce{TiO2} is a wide band-gap semiconductor (3.2 eV for anatase and 3.0 eV for rutile) \cite{Earle1942TheDioxide, Bendavid1999StructuralDeposition}, and suffers from low conductivity \cite{Wu2014High-performanceApproach}. To address this limitation, structural modifications, such as alloying with conductive metals or doping with nonmetallic impurities, have been explored to enhance charge transport by increasing the concentration of charge carriers \cite{Zheng2011FacilePhenol, Hahn2009SemimetallicNanotubes}.
 
 To further elucidate the trends observed in the thermodynamic screening, we analyze the stability and behavior of selected metals individually, under EWAS-relevant conditions with a focus on how their stability changes under EWAS-relevant conditions when little cyanide concentration (\SI{1e-4}M) is introduced. While cyanide is not typically added to EWAS systems, it may be generated as a transient species via the oxidation of amino acids like glycine. Across multiple systems, we find that even low cyanide concentrations can cause significant dissolution by stabilizing metal-cyanide complexes. Therefore, the use of metal electrodes that are susceptible to \ce{CN^-} dissolution should be approached with caution and a thorough understanding of the reaction mechanism.
 
@@ -200,19 +201,19 @@ The inclusion of cyanide (\ref{fig:Ni_Pourbaix_NH3_Gly_CN}) further expands the 
     \centering
     \begin{subfigure}[b]{0.32\textwidth}
         \subcaption{}\label{fig:Ni_Pourbaix_H2O}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
         % \par\medskip
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.32\textwidth}
         \subcaption{}\label{fig:Ni_Pourbaix_NH3_Gly}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
         % \par\medskip
     \end{subfigure}
     \hfill
     \begin{subfigure}[b]{0.32\textwidth}
         \subcaption{}\label{fig:Ni_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
         % \par\medskip   
     \end{subfigure}
     \caption{Ni Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$M, (a) \ce{H2O} only, (b) $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M, (c) $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. The green box indicates the experimental condition at applied potential = -2 to 2V vs RHE, pH = 11.5 to 13.5.}
@@ -236,17 +237,17 @@ Furthermore, even low concentrations of \ce{CN^-} (\num{1e-4}~M) significantly e
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Cu_Pourbaix_H2O}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Cu_Pourbaix_NH3_Gly}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Cu_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Cu-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Cu Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)\ce{H2O} only, (b)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M, (c)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. The green box indicates the experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
@@ -265,17 +266,17 @@ Furthermore, as shown in \Cref{fig:Au_Pourbaix_NH3_Gly_CN}, Au dissolution can b
     \centering
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Au_Pourbaix_H2O}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0M_[Gly]=0M_[CN]=0.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Au_Pourbaix_NH3_Gly}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.3\textwidth}
         \subcaption{}\label{fig:Au_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Au-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Au Pourbaix diagrams, with $\text{ion activity}=\num{1e-4}$, (a)\ce{H2O} only, (b)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M, (c)$[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. The green box indicates the experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
@@ -297,12 +298,12 @@ Notably, reported stability constants for \ce{[Pd(CN)_4]^{2-}} vary considerably
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Pd_Pourbaix_NH3_Gly}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Pd_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pd-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
        % \par\medskip   
     \end{subfigure}
 
@@ -329,12 +330,12 @@ Despite its excellent thermodynamic stability, a key limitation of Ti-based mate
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Ti_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ti-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Pt_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Pt-NH3-H2O_activity=1e-04_[NH3]=0.02M_[Gly]=0.005M_[CN]=0.0001.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Pourbaix diagrams of (a) Ti, (b) Pt. $\text{Ion activity}=\num{1e-4}$, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M,  $[\ce{CN-}]_{initial}=\num{1e-4}$M. The green box indicates the experimental condition at applied potential vs RHE = -2 to 2V, pH = 11.5 to 13.5.}
@@ -365,7 +366,7 @@ In the following subsection, we focus on Ni–Ti and Cu–Ti alloys and evaluate
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/alloy_pourbaix_collage_1.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/alloy_pourbaix_diagrams/alloy_pourbaix_collage_1.pdf}}
 \caption{Metal alloy Pourbaix diagrams: (a) Cu-Ti, (b) Fe-Ti, (c) Mn-Ti, (d) Ni-Ti, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:alloy_pourbaix_collage_1}
 \end{figure}
@@ -373,7 +374,7 @@ In the following subsection, we focus on Ni–Ti and Cu–Ti alloys and evaluate
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/alloy_pourbaix_collage_2.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/alloy_pourbaix_diagrams/alloy_pourbaix_collage_2.pdf}}
 \caption{Metal alloy Pourbaix diagrams: (e) Mg-Ti, (f) Zn-Ti, (g) Sr-Ti, (h) Au-Ti, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:alloy_pourbaix_collage_2}
 \end{figure}
@@ -392,12 +393,12 @@ Consistent with the report by Ding et al. \cite{Ding2018ElectrochemicalStates}, 
     \begin{subfigure}[b]{0.45\textwidth}
         \label{fig:TiNi_Pourbaix_NH3_Gly}
         \includegraphics[width=\textwidth]
-        {figures/stability_figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        {Figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \label{fig:TiNi_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Ti_Ni_alloy_Ti0.5 Ni0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Ni-Ti alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Ti:Ni = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
@@ -418,12 +419,12 @@ Alloying Ti with Cu has been studied primarily to improve titanium’s mechanica
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:TiCu_Pourbaix_NH3_Gly}
         \includegraphics[width=\textwidth]
-        {figures/stability_figures/alloy_pourbaix_diagrams/Ti_Cu_alloy_Ti0.5 Cu0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        {Figures/alloy_pourbaix_diagrams/Ti_Cu_alloy_Ti0.5 Cu0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:TiCu_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/alloy_pourbaix_diagrams/Ti_Cu_alloy_Ti0.5 Cu0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Ti_Cu_alloy_Ti0.5 Cu0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Cu-Ti alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Ti:Cu = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
@@ -446,7 +447,7 @@ Fe forms a stable \ce{FePd3} alloy that can coexist with bulk Fe and Pd oxides. 
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/alloy_pourbaix_collage_3.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/alloy_pourbaix_diagrams/alloy_pourbaix_collage_3.pdf}}
 \caption{Metal alloy Pourbaix diagrams: (a) Ag-Pd, (b) Pt-Pd, (c) Au-Pd, (d) Cu-Pd, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:alloy_pourbaix_collage_3}
 \end{figure}
@@ -454,7 +455,7 @@ Fe forms a stable \ce{FePd3} alloy that can coexist with bulk Fe and Pd oxides. 
 \begin{figure}[htbp]
 \centering
 \makebox[\textwidth][c]{%g
-        \includegraphics[width=1.1\textwidth]{figures/stability_figures/alloy_pourbaix_collage_4.pdf}}
+        \includegraphics[width=1.1\textwidth]{Figures/alloy_pourbaix_diagrams/alloy_pourbaix_collage_4.pdf}}
 \caption{Metal alloy Pourbaix diagrams: (e) Zn-Pd, (f) Sr-Pd, (g) Mg-Pd, (h) Fe-Pd, with $\text{ion activity}=\num{1e-4}$M, $[\ce{NH3}]_{initial}= 0.02$M, $[\text{Gly}]_{initial}=0.005$M. The green box indicates the experimental condition at an applied potential of -2 to 2V vs RHE, pH = 11.5 to 13.5.}
 \label{fig:alloy_pourbaix_collage_4}
 \end{figure}
@@ -474,12 +475,12 @@ In electrocatalysis, alloying Au with Pd has been shown to enhance Pd’s activi
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:PdAu_Pourbaix_NH3_Gly}
         \includegraphics[width=\textwidth]
-        {figures/stability_figures/alloy_pourbaix_diagrams/Pd_Au_alloy_Pd0.5 Au0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        {Figures/alloy_pourbaix_diagrams/Pd_Au_alloy_Pd0.5 Au0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:PdAu_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/alloy_pourbaix_diagrams/Pd_Au_alloy_Pd0.5 Au0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Pd_Au_alloy_Pd0.5 Au0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Au-Pd alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Pd:Au = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
@@ -495,12 +496,12 @@ As shown in \Cref{fig:PdPt_Pourbaix_NH3_Gly}, the Pt–Pd alloy is predicted to 
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:PdPt_Pourbaix_NH3_Gly}
         \includegraphics[width=\textwidth]
-        {figures/stability_figures/alloy_pourbaix_diagrams/Pd_Pt_alloy_Pd0.5 Pt0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
+        {Figures/alloy_pourbaix_diagrams/Pd_Pt_alloy_Pd0.5 Pt0.5_NH3=0.02M_Gly=0.005M_CN=0M_activity=1e-04M.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:PdPt_Pourbaix_NH3_Gly_CN}
-        \includegraphics[width=\textwidth]{figures/stability_figures/alloy_pourbaix_diagrams/Pd_Pt_alloy_Pd0.5 Pt0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
+        \includegraphics[width=\textwidth]{Figures/alloy_pourbaix_diagrams/Pd_Pt_alloy_Pd0.5 Pt0.5_NH3=0.02M_Gly=0.005M_CN=0.0001M_activity=1e-04M.png}
        % \par\medskip   
     \end{subfigure}
     \caption{Pt-Pd alloy Pourbaix diagrams with $\text{ion activity} = \num{1e-4}$: (a) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M; (b) $[\ce{NH3}]_\text{initial} = 0.02$~M, $[\text{Gly}]_\text{initial} = 0.005$~M, and $[\ce{CN^-}]_\text{initial} = \num{1e-4}$~M. A fixed reference stoichiometry of Pd:Pt = 1:1 was applied as a compositional constraint when generating the alloy Pourbaix diagrams. The green box highlights the experimentally relevant region, defined by an applied potential of \SIrange{-2}{2}{V} vs. RHE and a pH range of 11.5 to 13.5. Thermodynamically stable alloy regions are shaded in grey.}
@@ -528,22 +529,22 @@ In summary, this work provides a first-principles thermodynamic screening under 
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Ni_noise_-0.2}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni_gly_-0.25.png}
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni_gly_-0.2.png}
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Ni_noise_-0.067}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni_gly_-0.06666666666666668.png} 
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni_gly_-0.06666666666666668.png} 
        % \par\medskip
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Ni_noise_0.067}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni_gly_0.06666666666666665.png} 
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni_gly_0.06666666666666665.png} 
        % \par\medskip   
     \end{subfigure}
     \begin{subfigure}[b]{0.45\textwidth}
         \subcaption{}\label{fig:Ni_noise_0.2}
-        \includegraphics[width=\textwidth]{figures/stability_figures/pourbaix_diagrams/Ni_gly_0.2.png} 
+        \includegraphics[width=\textwidth]{Figures/pourbaix_diagrams/Ni_gly_0.2.png} 
        % \par\medskip
     \end{subfigure}
     
@@ -564,11 +565,11 @@ Overall, this work emphasizes the importance of integrating thermodynamic screen
 
 
 \section{CRediT authorship contribution statement}
-Nianhan Tian: Conceptualization, Methodology, Formal analysis, Software, Visualization, Writing – Original Draft.  
-Ehsan Abbasi: Investigation, Validation, Writing – Review \& Editing.  
-Haldrian Iriawan: Investigation, Validation, Writing – Review \& Editing.  
-Paul Kohl: Resources, Writing – Review \& Editing.  
-Andrew J. Medford: Conceptualization, Supervision, Project administration, Writing – Review \& Editing.
+Nianhan Tian: Conceptualization, Methodology, Formal analysis, Software, Visualization, Writing – Original Draft.  \\
+Ehsan Abbasi: Investigation, Validation, Writing – Review \& Editing.  \\
+Haldrian Iriawan: Investigation, Validation, Writing – Review \& Editing.  \\
+Paul Kohl: Resources, Writing – Review \& Editing.  \\
+Andrew J. Medford: Conceptualization, Supervision, Project administration, Writing – Review \& Editing.\\
 
 
 % Pourbaix diagrams of metal-\ce{NH3}/glycine/\ce{CN-}-\ce{H2O} are generated and discussed to identify thermodynamic behavior of an ideal material what can be used as an electrode in EWAS. The dissolvation behavior of various electrode under oxidizing potentials and high N-ligand concentrations was well explained by these pourbaix diagrams. The stability regions of build Ti and it oxides compared with other metals present its thermodynamically stability under such conditions. 
@@ -598,6 +599,7 @@ Free energies of metal-ligand complexes are available.
 
 
 \end{suppinfo}
+
 % \input{SI.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% The appropriate \bibliography command should be placed here.
